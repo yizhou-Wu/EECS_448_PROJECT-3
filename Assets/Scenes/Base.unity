@@ -1477,7 +1477,7 @@ GameObject:
   - component: {fileID: 1627453375}
   m_Layer: 0
   m_Name: Stage1
-  m_TagString: Stage
+  m_TagString: Midterm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

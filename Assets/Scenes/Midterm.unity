@@ -3063,11 +3063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80be9b7392cc04390808d03697ca4d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Question0: {fileID: 0}
-  Question1: {fileID: 1696860327}
-  Question2: {fileID: 1696860327}
-  Question3: {fileID: 1696860327}
-  Question4: {fileID: 1696860327}
+  totalpoint: {fileID: 1696860327}
   dropdown: {fileID: 1670027947}
   dropdown1: {fileID: 1630046545}
   dropdown2: {fileID: 1815037187}

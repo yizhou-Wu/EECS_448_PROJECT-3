@@ -7,21 +7,19 @@ public class Question : MonoBehaviour
 {
 
     public Text totalpoint;
-
+    public static float GPA;
     public static int point;
     public static int point1;
     public static int point2;
     public static int point3;
     public static int point4;
     public static int totalpoint1;
-
-    public static float GPA;
-
     List<string> questions = new List<string>() { "A is member of object B", "B is member of Object A", "Product of A and B", "None of these" };
     List<string> questions1 = new List<string>() { "Operator-&", "Operator-||", "Operator-&&", "Operator +" };
     List<string> questions2 = new List<string>() { "A Slash (/)", "A Fullstop(.)", "A Comma (,)", "A Semicolon (;)" };
     List<string> questions3 = new List<string>() { "<fiostream>", "<ifstream>", "<ofstream>", "<fstream>" };
     List<string> questions4 = new List<string>() { "thrown", "threw", "throw", "throws" };
+    
     public Dropdown dropdown;
     public Dropdown dropdown1;
     public Dropdown dropdown2;
@@ -78,7 +76,6 @@ public class Question : MonoBehaviour
         if (index == 1)
         {
             point = 20;
-            GPA = totalpoint1 / 100f;
         }
         else
         {
@@ -91,7 +88,6 @@ public class Question : MonoBehaviour
         if (index == 2)
         {
             point1 = 20;
-            GPA = totalpoint1 / 100f;
         }
         else
         {
@@ -104,7 +100,6 @@ public class Question : MonoBehaviour
         if (index == 3)
         {
             point2 = 20;
-            GPA = totalpoint1 / 100f;
         }
         else
         {
@@ -117,7 +112,6 @@ public class Question : MonoBehaviour
         if (index == 3)
         {
             point3 = 20;
-            GPA = totalpoint1 / 100f;
         }
         else
         {
@@ -130,7 +124,6 @@ public class Question : MonoBehaviour
         if (index == 2)
         {
             point4 = 20;
-            GPA = totalpoint1 / 100f;
         }
         else
         {
@@ -142,7 +135,7 @@ public class Question : MonoBehaviour
 
     {
         totalpoint1 = point + point1 + point2 + point3 + point4;
-        Playermove.GPA = totalpoint1 / 100;
+        GPA = totalpoint1 / 100f;
         totalpoint.text = totalpoint1.ToString();
 
     }
