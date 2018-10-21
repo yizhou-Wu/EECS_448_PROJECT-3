@@ -11,7 +11,6 @@ public class Playermove : MonoBehaviour {
     private static bool playerExist;// Flag to check whether the player is existing on current screnn;
     private void Start()
     {
-        Debug.Log(GPA);
         if(!playerExist)
         {
             playerExist = true;
@@ -21,7 +20,6 @@ public class Playermove : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-        Debug.Log(GPA);
 
 
     }
