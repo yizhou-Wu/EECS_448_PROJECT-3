@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Question : MonoBehaviour {
+public class Question : MonoBehaviour
+{
 
-    //private points ps;
-    public Text Question0;
-    public Text Question1;
-    public Text Question2;
-    public Text Question3;
-    public Text Question4;
+    public Text totalpoint;
 
     public static int point;
+    public static int point1;
+    public static int point2;
+    public static int point3;
+    public static int point4;
+    public static int totalpoint1;
+
     public static float GPA;
-    
+
     List<string> questions = new List<string>() { "A is member of object B", "B is member of Object A", "Product of A and B", "None of these" };
     List<string> questions1 = new List<string>() { "Operator-&", "Operator-||", "Operator-&&", "Operator +" };
     List<string> questions2 = new List<string>() { "A Slash (/)", "A Fullstop(.)", "A Comma (,)", "A Semicolon (;)" };
@@ -26,7 +28,8 @@ public class Question : MonoBehaviour {
     public Dropdown dropdown3;
     public Dropdown dropdown4;
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         questionlist();
         questionlist1();
         questionlist2();
@@ -34,17 +37,19 @@ public class Question : MonoBehaviour {
         questionlist4();
     }
 
-    void questionlist () {
+    void questionlist()
+    {
 
         dropdown.AddOptions(questions);
-        
-	}
 
-    void questionlist2() {
-        
+    }
+
+    void questionlist2()
+    {
+
         dropdown2.AddOptions(questions2);
-        
-	}
+
+    }
 
     void questionlist3()
     {
@@ -56,7 +61,7 @@ public class Question : MonoBehaviour {
     void questionlist4()
     {
 
-        dropdown4.AddOptions(questions4);;
+        dropdown4.AddOptions(questions4); ;
 
     }
 
@@ -67,82 +72,83 @@ public class Question : MonoBehaviour {
     }
 
 
-    
+
     public void DropdownIndex(int index)
     {
-        Question0.text = questions[index]; 
-        if(index==1)
+        if (index == 1)
         {
-            point += 20;
-            Question0.text = point.ToString();
+            point = 20;
+            GPA = totalpoint1 / 100f;
         }
         else
         {
-            
-            Question0.text = point.ToString();
+            point = 0;
         }
     }
 
     public void DropdownIndex1(int index)
     {
-        Question1.text = questions1[index];
         if (index == 2)
         {
-            point += 20;
-            Question1.text = point.ToString();
+            point1 = 20;
+            GPA = totalpoint1 / 100f;
         }
         else
         {
-            
-            Question1.text = point.ToString();
+            point1 = 0;
         }
     }
 
     public void DropdownIndex2(int index)
     {
-        Question2.text = questions2[index];
         if (index == 3)
         {
-            point+= 20;
-            Question2.text = point.ToString();
+            point2 = 20;
+            GPA = totalpoint1 / 100f;
         }
         else
         {
-
-            Question2.text = point.ToString();
+            point2 = 0;
         }
     }
 
     public void DropdownIndex3(int index)
     {
-        Question3.text = questions3[index];
         if (index == 3)
         {
-            point += 20;
-            Question3.text = point.ToString();
+            point3 = 20;
+            GPA = totalpoint1 / 100f;
         }
         else
         {
-
-            Question3.text = point.ToString();
+            point3 = 0;
         }
     }
 
     public void DropdownIndex4(int index)
     {
-        Question4.text = questions4[index];
         if (index == 2)
         {
-            point += 20;
-            GPA = point / 100f;
-            Question4.text = point.ToString();
+            point4 = 20;
+            GPA = totalpoint1 / 100f;
         }
         else
         {
-
-            Question4.text = point.ToString();
+            point4 = 0;
         }
     }
-   
-}
 
+    public void total()
+
+    {
+        totalpoint1 = point + point1 + point2 + point3 + point4;
+        Playermove.GPA = totalpoint1 / 100;
+        totalpoint.text = totalpoint1.ToString();
+
+    }
+
+    public void Update()
+    {
+        total();
+    }
+}
