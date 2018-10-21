@@ -11,7 +11,6 @@ public class UIManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         GPABar.value = Playermove.GPA;
-        Debug.Log(GPABar.value);
     }
 	
 	// Update is called once per frame
