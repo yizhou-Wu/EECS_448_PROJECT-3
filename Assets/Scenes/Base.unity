@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 267001482}
   m_Layer: 0
   m_Name: Stage6
-  m_TagString: Finish
+  m_TagString: Midterm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1181,7 +1181,7 @@ GameObject:
   - component: {fileID: 796264447}
   m_Layer: 0
   m_Name: Stage5
-  m_TagString: Stage
+  m_TagString: TEST
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1477,7 +1477,7 @@ GameObject:
   - component: {fileID: 1627453375}
   m_Layer: 0
   m_Name: Stage1
-  m_TagString: Midterm
+  m_TagString: TEST
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1564,7 +1564,7 @@ GameObject:
   - component: {fileID: 1724475518}
   m_Layer: 0
   m_Name: Stage4
-  m_TagString: Stage
+  m_TagString: ShotGame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1885,7 +1885,7 @@ GameObject:
   - component: {fileID: 2119597657}
   m_Layer: 0
   m_Name: Stage2
-  m_TagString: Stage
+  m_TagString: Tic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

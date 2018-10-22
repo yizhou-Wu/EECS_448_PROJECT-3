@@ -1,6 +1,11 @@
 ﻿
 //reference: https://blog.csdn.net/peanutdo1t/article/details/79706261; Author: PeanutDo1t
-// EECS448 Project3: TicTakToe - Xinyun Yu
+/** 
+ * @author Team FourFour8
+ * @file TicTacToe.cs
+ * @date October 2018
+ * @brief TicTacToe class. This class takes charge of the properties of the game TicTacToe.
+**/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +18,11 @@ public class TicTacToe : MonoBehaviour
     // The computer will be -1
 
     // Use this for initialization
+    /**
+    * @pre None.
+    * @post Initialize the 3*3 board;
+    * @para None.
+    **/
     void Start()
     {
         player = 1;
@@ -24,8 +34,11 @@ public class TicTacToe : MonoBehaviour
             }
         }
     }
-
-    // Checking for the game result:
+    /**
+    * @pre An existing board.
+    * @post Check for the game result.
+    * @para None.
+    **/
     int check()
     {
         // winning case:horizontal
@@ -72,6 +85,11 @@ public class TicTacToe : MonoBehaviour
     }
 
     //main function
+    /**
+    * @pre An existing board.
+    * @post Allow the user to play the game.
+    * @para None.
+    **/
     void OnGUI()
     {
         GUIStyle fontStyle = new GUIStyle();

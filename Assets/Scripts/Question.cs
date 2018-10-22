@@ -79,7 +79,6 @@ public class Question : MonoBehaviour
         if (index == 1)
         {
             point = 20;
-            GPA = totalpoint1 / 100f;
         }
         else
         {
@@ -94,7 +93,7 @@ public class Question : MonoBehaviour
         if (index == 2)
         {
             point1 = 20;
-            GPA = totalpoint1 / 100f;
+          
         }
         else
         {
@@ -109,7 +108,6 @@ public class Question : MonoBehaviour
         if (index == 3)
         {
             point2 = 20;
-            GPA = totalpoint1 / 100f;
         }
         else
         {
@@ -123,7 +121,6 @@ public class Question : MonoBehaviour
         if (index == 3)
         {
             point3 = 20;
-            GPA = totalpoint1 / 100f;
         }
         else
         {
@@ -138,7 +135,6 @@ public class Question : MonoBehaviour
         if (index == 2)
         {
             point4 = 20;
-            GPA = totalpoint1 / 100f;
         }
         else
         {
@@ -152,6 +148,7 @@ public class Question : MonoBehaviour
 
     {
         totalpoint1 = point + point1 + point2 + point3 + point4;
+        GPA = totalpoint1 / 100f;
         totalpoint.text = totalpoint1.ToString();
     }
 

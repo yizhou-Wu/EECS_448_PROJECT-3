@@ -18,9 +18,19 @@ public class Eventtrigger : MonoBehaviour
             SceneManager.LoadScene("Midterm");
             collision.isTrigger = false;//Turn off the trigger so that the user cannot go back.
         }
-        else if(collision.gameObject.tag == "Stage")
+        else if(collision.gameObject.tag == "Tic")
+        {
+            SceneManager.LoadScene("Tic");
+            collision.isTrigger = false;
+        }
+        else if (collision.gameObject.tag == "TEST")
         {
             SceneManager.LoadScene("test");
+            collision.isTrigger = false;
+        }
+        else if (collision.gameObject.tag == "ShotGame")
+        {
+            SceneManager.LoadScene("EECS448");
             collision.isTrigger = false;
         }
     }

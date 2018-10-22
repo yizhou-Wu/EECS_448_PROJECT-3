@@ -7,6 +7,9 @@ TagManager:
   - Midterm
   - Stage
   - Ground
+  - TEST
+  - Tic
+  - ShotGame
   layers:
   - Default
   - TransparentFX

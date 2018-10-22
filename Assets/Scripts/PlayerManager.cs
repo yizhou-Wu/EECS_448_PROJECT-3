@@ -45,7 +45,7 @@ public class PlayerManager : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.RightArrow))//Move right.
             {
-                gameObject.transform.position += new Vector3(20, 0, 0);//-20 is the distance from one block to anouther.
+                gameObject.transform.position += new Vector3(20, 0, 0);//20 is the distance from one block to anouther.
                 i = 0;//Reset the time counter.
             }
             if (Input.GetKey(KeyCode.LeftArrow))//Move left.
