@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Stage4.cs" />
     <Compile Include="Assets\Scripts\Stage5.cs" />
     <Compile Include="Assets\Scripts\SwitchSceneButton.cs" />
+    <Compile Include="Assets\Scripts\TicTacToe.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/Wuyizhou/Downloads/EECS_448_PROJECT-3/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
