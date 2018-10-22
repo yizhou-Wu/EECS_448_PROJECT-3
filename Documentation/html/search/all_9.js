@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['onmousedown',['OnMouseDown',['../class_switch_scene_button.html#a3a6cb9aef4d5229f68785c81d46b999e',1,'SwitchSceneButton']]],
-  ['ontriggerenter2d',['OnTriggerEnter2D',['../classeventtrigger.html#ab8d708c15e28e1399fa9d41f669eedcc',1,'eventtrigger']]]
+  ['jump',['Jump',['../class_player___movements.html#abbbbad1e6401b42c3b849c64d47d99c2',1,'Player_Movements']]],
+  ['jumppower',['jumpPower',['../class_player___movements.html#a562c4e768d2b83ad268c8053c045edbc',1,'Player_Movements']]]
 ];

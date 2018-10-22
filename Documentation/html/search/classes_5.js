@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['switchscenebutton',['SwitchSceneButton',['../class_switch_scene_button.html',1,'']]]
+  ['question',['Question',['../class_question.html',1,'']]]
 ];

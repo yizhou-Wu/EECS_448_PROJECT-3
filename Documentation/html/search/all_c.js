@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['start',['Start',['../class_g_o_b_a_c_k.html#a0161ff532919ddc954bc936ac2319e93',1,'GOBACK.Start()'],['../class_g_p_a_manager.html#ab2c0ff4274923805283437d67c3ad071',1,'GPAManager.Start()'],['../class_playermove.html#a4115d77d452bd2706b300a1f10833e1e',1,'Playermove.Start()'],['../class_question.html#ab30af345c147f06db2ecc52b2cd7a1db',1,'Question.Start()'],['../class_u_i_manager.html#a2bd6b48b13b9e14e6292e4b713f59584',1,'UIManager.Start()']]],
-  ['switchscenebutton',['SwitchSceneButton',['../class_switch_scene_button.html',1,'']]],
-  ['switchscenebutton_2ecs',['SwitchSceneButton.cs',['../_switch_scene_button_8cs.html',1,'']]]
+  ['oncollisionenter2d',['OnCollisionEnter2D',['../class_enimies___movement.html#a98dcfa43119b8af2762f2fc399393d72',1,'Enimies_Movement.OnCollisionEnter2D()'],['../class_player___movements.html#a800017ee205b0b89a91fb63c541feb68',1,'Player_Movements.OnCollisionEnter2D()'],['../class_player___status.html#a79ff17577bdb110c4e9c7c3ed2f46c0e',1,'Player_Status.OnCollisionEnter2D()']]],
+  ['ongui',['OnGUI',['../class_tic_tac_toe.html#afd4ffb263d289498980a6cbbef7580ba',1,'TicTacToe']]],
+  ['onmousedown',['OnMouseDown',['../class_switch_scene_button.html#a3a6cb9aef4d5229f68785c81d46b999e',1,'SwitchSceneButton']]],
+  ['ontriggerenter2d',['OnTriggerEnter2D',['../class_bullet.html#af4c64facc097b5cc17e8a4efffe763f7',1,'Bullet.OnTriggerEnter2D()'],['../class_eventtrigger.html#aa420bc188a7d161610edeafac565dbbf',1,'Eventtrigger.OnTriggerEnter2D()']]]
 ];
