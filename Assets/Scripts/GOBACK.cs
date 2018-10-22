@@ -10,7 +10,8 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GOBACK : MonoBehaviour {
+public class GOBACK : MonoBehaviour
+{
     public Button bt;
     /**
     * @pre None.

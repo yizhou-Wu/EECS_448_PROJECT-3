@@ -1,8 +1,8 @@
 ﻿/** 
  * @author Team FourFour8
- * @file Eventtrigger.cs
+ * @file Stage4.cs
  * @date October 2018
- * @brief Eventtrigger class. This class takes charge of the properties of the Eventtrigger.
+ * @brief Stage4 class. This class takes charge of the properties of the Stage4.
 **/
 using System.Collections;
 using System.Collections.Generic;
@@ -36,8 +36,9 @@ public class Eventtrigger : MonoBehaviour
         }
         else if (collision.gameObject.tag == "ShotGame")
         {
-            SceneManager.LoadScene("EECS448");
+            SceneManager.LoadScene("EECS268");
             collision.isTrigger = false;
+            gameObject.SetActive(false);
         }
     }
 }

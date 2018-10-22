@@ -29,6 +29,11 @@ public class Question : MonoBehaviour
     public Dropdown dropdown3;
     public Dropdown dropdown4;
     // Use this for initialization
+    /**
+     * @pre valid questionlist
+     * @post set the vaild questionlist for each question
+     * @para None.
+     **/
     void Start()
     {
         questionlist();
@@ -38,8 +43,11 @@ public class Question : MonoBehaviour
         questionlist4();
     }
 
-
-    //add elements into the first dropdown
+    /**
+     * @pre valid questionlist
+     * @post add elements into the first dropdown 
+     * @para None.
+     **/
     void questionlist()
     {
 
@@ -47,38 +55,59 @@ public class Question : MonoBehaviour
 
     }
 
-    //add elements into the second dropdown
+    /**
+    * @pre valid questionlist
+    * @post add elements into the third dropdown 
+    * @para None.
+    **/
     void questionlist2()
     {
 
         dropdown2.AddOptions(questions2);
     }
 
-    //add elements in the third dropdown
+    /**
+    * @pre valid questionlist
+    * @post add elements into the fourth dropdown 
+    * @para None.
+    **/
     void questionlist3()
     {
         dropdown3.AddOptions(questions3);
     }
 
-    //add elements in the fourth dropdown
+    /**
+    * @pre valid questionlist
+    * @post add elements into the fifth dropdown 
+    * @para None.
+    **/
     void questionlist4()
     {
         dropdown4.AddOptions(questions4); ;
     }
 
-    //add elements in the fifth dropdown
+    /**
+    * @pre valid questionlist
+    * @post add elements into the second dropdown 
+    * @para None.
+    **/
     void questionlist1()
     {
         dropdown1.AddOptions(questions1);
     }
 
 
-    //for question 1, after picking the second option;
+    /**
+    * @pre valid dropdown
+    * @post add elements into the first dropdown 
+    * @para index of anwser(int).
+    **/
     public void DropdownIndex(int index)
     {
         if (index == 1)
         {
             point = 20;
+            
         }
         else
         {
@@ -87,13 +116,17 @@ public class Question : MonoBehaviour
     }
 
 
-    //for question 2, after picking the third option;
+    /**
+    * @pre valid dropdown
+    * @post add elements into the second dropdown 
+    * @para index of anwser(int).
+    **/
     public void DropdownIndex1(int index)
     {
         if (index == 2)
         {
             point1 = 20;
-          
+            
         }
         else
         {
@@ -102,12 +135,17 @@ public class Question : MonoBehaviour
     }
 
 
-    //for question 3, after picking the fourth option;
+    /**
+    * @pre valid dropdown
+    * @post add elements into the third dropdown 
+    * @para index of anwser(int).
+    **/
     public void DropdownIndex2(int index)
     {
         if (index == 3)
         {
             point2 = 20;
+            
         }
         else
         {
@@ -115,12 +153,17 @@ public class Question : MonoBehaviour
         }
     }
 
-    //for question 4, after picking the fourth option;
+    /**
+    * @pre valid dropdown
+    * @post add elements into the fourth dropdown 
+    * @para index of anwser(int).
+    **/
     public void DropdownIndex3(int index)
     {
         if (index == 3)
         {
             point3 = 20;
+            
         }
         else
         {
@@ -129,12 +172,17 @@ public class Question : MonoBehaviour
     }
 
 
-    //for question 5, after picking the third option;
+    /**
+    * @pre valid dropdown
+    * @post add elements into the fifth dropdown 
+    * @para index of anwser(int).
+    **/
     public void DropdownIndex4(int index)
     {
         if (index == 2)
         {
             point4 = 20;
+            
         }
         else
         {
@@ -143,15 +191,22 @@ public class Question : MonoBehaviour
     }
 
 
-    //total point for the midterm;
+    /**
+    * @pre valid point
+    * @post count the totalpoint 
+    * @para None.
+    **/
     public void total()
 
     {
-        totalpoint1 = point + point1 + point2 + point3 + point4;
+        totalpoint1 = point + point1 + point2 + point3 + point4;     
         GPA = totalpoint1 / 100f;
-        totalpoint.text = totalpoint1.ToString();
     }
-
+    /**
+     * @pre  None
+     * @post update the total point
+     * @para None.
+     **/
     public void Update()
     {
         total();

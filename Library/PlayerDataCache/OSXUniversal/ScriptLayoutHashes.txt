@@ -1,11 +1,13 @@
 OSXStandalone
 PlayerPath?
-/Users/Wuyizhou/Downloads/EECS_448_PROJECT-3-WU/Project#3.app
+/Users/Wuyizhou/Downloads/EECS_448_PROJECT-3/PROJECT#3.app
 SceneListBegin?
 Assets/Scenes/Base.unity
 Assets/Scenes/test.unity
 Assets/Scenes/Midterm.unity
 Assets/Scenes/Tic.unity
+Assets/Scenes/EECS268.unity
+Assets/Scenes/gamefinish.unity
 SceneListEnd?
 2604c7fe7c64cf4ee6c0cf147c4a5481 Assembly-CSharp.dll:.UIManager
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -172,10 +174,17 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GameManager
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Stage5
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.TicTacToe
+7c57507d042a4c9732bfe0fad922764b Assembly-CSharp.dll:.Camera
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Btn_Quit
+5f1e03bdc521fce483cce010e3f73123 Assembly-CSharp.dll:.Player_Status
+46ddd656fb94738888131ffa15cd4842 Assembly-CSharp.dll:.Weapon
+fe5bd4a5def28af6cbdc0d408a532807 Assembly-CSharp.dll:.Player_Movements
+49a447778e1ddf38b96e338f279e1cba Assembly-CSharp.dll:.Enimies_Movement
+1c52c380446f48c155620174ca2ed480 Assembly-CSharp.dll:.Enimies_Status
+5075e71605a62ee1d3191e59d938f393 Assembly-CSharp.dll:.Bullet

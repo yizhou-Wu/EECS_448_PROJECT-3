@@ -2,7 +2,7 @@
  * @author Team FourFour8
  * @file UIManager.cs
  * @date October 2018
- * @brief UIManager class. This class takes charge of the properties of the UI.
+ * @brief Stage5 class. This class takes charge of the properties of the UI.
 **/
 using System.Collections;
 using System.Collections.Generic;
@@ -32,6 +32,8 @@ public class UIManager : MonoBehaviour {
         GPABar.maxValue = 1;
         GPABar.value = PlayerManager.GPA;
         float GPAString = PlayerManager.GPA * 4;
+
+
         GPAText.text = GPAString.ToString("0.00")+"/4.00";
 
 	}
