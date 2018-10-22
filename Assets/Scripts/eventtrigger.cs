@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/** 
+ * @author Team FourFour8
+ * @file Eventtrigger.cs
+ * @date October 2018
+ * @brief Eventtrigger class. This class takes charge of the properties of the Eventtrigger.
+**/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
