@@ -1,10 +1,18 @@
 ﻿<Properties StartupConfiguration="{1F94DBDE-A380-A5AE-F9A8-070AC332E695}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SwitchSceneButton.cs">
     <Files>
+      <File FileName="Assets/Scripts/Eventtrigger.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/PlayerManager.cs" Line="18" Column="1" />
       <File FileName="Assets/Scripts/Question.cs" Line="147" Column="2" />
-      <File FileName="Assets/Scripts/SwitchSceneButton.cs" Line="24" Column="1" />
-      <File FileName="Assets/GameManager.cs" Line="11" Column="9" />
+      <File FileName="Assets/Scripts/Stage1.cs" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/Stage2.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Stage3.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Stage4.cs" Line="14" Column="39" />
+      <File FileName="Assets/Scripts/Stage5.cs" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/SwitchSceneButton.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/UIManager.cs" Line="29" Column="18" />
+      <File FileName="Assets/GameManager.cs" Line="7" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

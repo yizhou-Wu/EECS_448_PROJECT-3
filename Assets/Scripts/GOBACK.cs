@@ -5,9 +5,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GOBACK : MonoBehaviour {
-
-    // Use this for initialization
     public Button bt;
+    /**
+    * @pre None.
+    * @post Load the scene depending on the collision tag.
+    * @para The objects that collide.
+    **/
     void Start()
     {
         bt.onClick.AddListener(TaskOnClick);

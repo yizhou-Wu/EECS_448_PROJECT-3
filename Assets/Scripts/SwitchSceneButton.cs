@@ -21,7 +21,7 @@ public class SwitchSceneButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        Playermove.GPA = Question.GPA;
+        PlayerManager.GPA = Question.GPA;
         Application.LoadLevel(LevelToLoad);
         
     }
