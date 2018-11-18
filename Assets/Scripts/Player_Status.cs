@@ -35,14 +35,16 @@ public class Player_Status : MonoBehaviour {
    * @return void
    **/
     void Update () {
-		if(gameObject.transform.position.y < -7)
+		if(gameObject.transform.position.y < 18)
         {
+            
             isAlive = false;
 
         }
         
         if(isAlive == false)
         {
+            
             StartCoroutine("Death");
         }
 	}
@@ -54,15 +56,21 @@ public class Player_Status : MonoBehaviour {
     **/
     IEnumerator Death()
     {
-        gameOver.text = "Game Over";
-        // Instantiate(PlayerDeathEffect, transform.position, Quaternion.identity);
 
+        // Instantiate(PlayerDeathEffect, transform.position, Quaternion.identity);
+        gameOver.text = "Game Over";
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
         SceneManager.LoadScene("EECS268");
         
         
     }
+
+    public void TakeDmg(int dmg)
+    {
+        isAlive = false;
+    }
+
     /**
    * defines collison of player with enemy
    * @pre collision occurs

@@ -12,10 +12,10 @@ using UnityEngine;
 **/ 
 public class Camera : MonoBehaviour {
     private GameObject player;
-    public float xMin;
-    public float xMax;
-    public float yMin;
-    public float yMax;
+    public float xMin = 0;
+    public float xMax = 320;
+    public float yMin = 25;
+    public float yMax = 40;
 
 
     /**

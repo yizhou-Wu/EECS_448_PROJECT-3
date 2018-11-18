@@ -10,6 +10,10 @@ TagManager:
   - TEST
   - Tic
   - ShotGame
+  - Hole
+  - Enemy
+  - Wall
+  - Wall2
   layers:
   - Default
   - TransparentFX

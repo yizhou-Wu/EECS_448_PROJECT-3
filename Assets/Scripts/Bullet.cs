@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour {
      **/
     void Update()
     {
-        if (frame < 45)
+        if (frame < 100)
         {
             Debug.Log("Frame: " + frame);
             frame++;

@@ -89,7 +89,7 @@ public class Player_Movements : MonoBehaviour {
  **/
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        if(collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Wall2")
         {
             isGround = true;
         }
@@ -97,10 +97,7 @@ public class Player_Movements : MonoBehaviour {
         {
             freeze = true;
         }
-        if (collision.gameObject.tag == "Hole")
-        {
-            freeze = true;
-        }
+        
     }
 
    

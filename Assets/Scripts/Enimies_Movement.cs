@@ -12,9 +12,10 @@ using UnityEngine;
 **/
 public class Enimies_Movement : MonoBehaviour {
 
-    public int Speed;
-    public int Direction;
+    public int Speed = 4;
+    public int Direction = -1;
     private bool Efreeze;
+    
 
     /**
      * update is called once per frame
@@ -24,16 +25,8 @@ public class Enimies_Movement : MonoBehaviour {
      **/
     void Update () {
         if(Efreeze == false)
-        {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, new Vector2(Direction, 0));
+        { 
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(Direction, 0) * Speed;
-            if (hit.distance < 0.7f)
-            {
-                Flip();
-            }
-        }
-        else
-        {
             Debug.Log("Freeze");
         }
         
@@ -64,7 +57,12 @@ public class Enimies_Movement : MonoBehaviour {
      **/
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag =="Wall2" || collision.gameObject.tag == "Enemy")
+        {
+            Flip();
+        }
         
+
         if (collision.gameObject.tag == "Player")
         {
             Efreeze = true;
