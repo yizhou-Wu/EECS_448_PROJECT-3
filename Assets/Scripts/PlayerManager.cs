@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour {
     public static float GPA;// The global 
     float i = 1;// Counter that prevent the user to move multiple times.
     private static bool playerExist;// Flag to check whether the player is existing on current screnn;
+    public static float Health;
     /**
     * @pre None.
     * @post Keep the GameObject player when change the scene because unity destroy eveything on current scene after change scenes.
@@ -22,6 +23,7 @@ public class PlayerManager : MonoBehaviour {
     **/
     void Start()
     {
+        Health = 100.0f;
         if(!playerExist)
         {
             playerExist = true;
