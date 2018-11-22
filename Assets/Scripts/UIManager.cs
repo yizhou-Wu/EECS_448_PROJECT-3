@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour {
     public Text GPAText;
     public Slider HealthBar;
     public Text HealthText;
+    public Text MoneyText;
     //public GPAManager GPA;
     public float gpatext;
     // Use this for initialization
@@ -25,6 +26,7 @@ public class UIManager : MonoBehaviour {
     void Start () {
         GPABar.value = PlayerManager.GPA;
         HealthBar.value = PlayerManager.Health;
+        MoneyText.text = (PlayerManager.Money).ToString("0") + "$";
     }
 	/**
     * @pre Valid PlayerManager.GPA.
@@ -36,10 +38,11 @@ public class UIManager : MonoBehaviour {
         GPABar.value = PlayerManager.GPA;
         float GPAString = PlayerManager.GPA * 4;
         HealthBar.maxValue = 1;
-        HealthBar.value = PlayerManager.Health;
+        HealthBar.value = PlayerManager.Health/100;
         float HealthString = PlayerManager.Health;
         HealthText.text = "Health:"+HealthString.ToString("0")+"/100";
         GPAText.text = "GPA:"+GPAString.ToString("0.00")+"/4.00";
+        MoneyText.text ="Money:"+(PlayerManager.Money).ToString("0")+"$";
 
-	}
+    }
 }

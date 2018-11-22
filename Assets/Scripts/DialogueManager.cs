@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour {
     public Text eventName;
     public Text text;
     private Queue<string> sentences;
+    public int DiceNum;
     public void Start()
     {
         sentences = new Queue<string>();
@@ -36,6 +37,28 @@ public class DialogueManager : MonoBehaviour {
     {
            Debug.Log("end of it");
     }
-    
+    public void RollDice()
+    {
+        DiceNum = Random.Range(1,6);
+        Debug.Log(DiceNum);
+    }
+    public void ResultGenerate()
+    {
+        RollDice();
+        if(DiceNum==1||DiceNum==2||DiceNum==3)
+        {
+
+            UnityEditor.EditorUtility.DisplayDialog("Worst Case!", "Sadly,The gril turned down your invitation.Nothing happened", "Okay");
+            SceneManager.LoadScene("base");
+        }
+        else
+        {
+            Debug.Log(PlayerManager.Money);
+            PlayerManager.Money -= 50;
+            Debug.Log(PlayerManager.Money);
+            UnityEditor.EditorUtility.DisplayDialog("Best Case!", "She accepted your invitation and you had a nice meal. You cost 50$.", "Okay");
+            SceneManager.LoadScene("base");
+        }
+    }
 
 }

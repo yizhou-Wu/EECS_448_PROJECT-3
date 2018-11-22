@@ -31,7 +31,7 @@ public class Eventtrigger : MonoBehaviour
         }
         else if (collision.gameObject.tag == "TEST")
         {
-            SceneManager.LoadScene("test");
+            SceneManager.LoadScene("randomE");
             collision.isTrigger = false;
         }
         else if (collision.gameObject.tag == "ShotGame")

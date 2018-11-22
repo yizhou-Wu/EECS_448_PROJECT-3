@@ -14,8 +14,9 @@ public class PlayerManager : MonoBehaviour {
     public static float Movespeed;// The move speed of the charater.
     public static float GPA;// The global 
     float i = 1;// Counter that prevent the user to move multiple times.
-    private static bool playerExist;// Flag to check whether the player is existing on current screnn;
-    public static float Health;
+    //private static bool playerExist;// Flag to check whether the player is existing on current screnn;
+    public static float Health=100.0f;
+    public static float Money=100.0f;
     /**
     * @pre None.
     * @post Keep the GameObject player when change the scene because unity destroy eveything on current scene after change scenes.
@@ -23,13 +24,8 @@ public class PlayerManager : MonoBehaviour {
     **/
     void Start()
     {
-        Health = 100.0f;
-        if(!playerExist)
-        {
-            playerExist = true;
-            DontDestroyOnLoad(transform.gameObject);
-        }
-        else
+        DontDestroyOnLoad(this);
+        if (FindObjectsOfType(GetType()).Length > 1)
         {
             Destroy(gameObject);
         }
@@ -43,20 +39,27 @@ public class PlayerManager : MonoBehaviour {
     **/
     void Update ()
     {
+        
         if (i >= 1)
         {
             if (Input.GetKey(KeyCode.RightArrow))//Move right.
             {
                 gameObject.transform.position += new Vector3(20, 0, 0);//20 is the distance from one block to anouther.
+                Health -= 10;
                 i = 0;//Reset the time counter.
             }
             if (Input.GetKey(KeyCode.LeftArrow))//Move left.
             {
                 gameObject.transform.position += new Vector3(-20, 0, 0);
+                Health -= 10;
                 i = 0;
             }
             
         }
         i += Time.deltaTime;//Counter increase.
+        if(Health<=0)
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
     }
 }

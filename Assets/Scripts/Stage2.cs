@@ -17,7 +17,6 @@ public class Stage2 : MonoBehaviour {
     public void Awake()
     {
         DontDestroyOnLoad(this);
-        Debug.Log(111);
         if (FindObjectsOfType(GetType()).Length > 1)
         {
             Destroy(gameObject);
