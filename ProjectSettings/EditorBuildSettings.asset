@@ -14,4 +14,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Midterm.unity
     guid: ae1cc4262bb0947bf8c46996ccef2e64
+  - enabled: 1
+    path: Assets/Scenes/Tic.unity
+    guid: 8a6028c83a86047238f4fc66a61dde23
+  - enabled: 1
+    path: Assets/Scenes/EECS268.unity
+    guid: b0091889af8536544adf14e233806495
+  - enabled: 1
+    path: Assets/Scenes/gamefinish.unity
+    guid: a00efcc45f30cff40815b7b24710614c
+  - enabled: 1
+    path: Assets/Scenes/shop.unity
+    guid: 22fcb8a1c6f370f4dbd98cbbba98b79b
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: bd5e70835f31d46489ea7b9bfe009ed3
   m_configObjects: {}

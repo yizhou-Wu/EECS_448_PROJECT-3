@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Question : MonoBehaviour {
-
-    //private points ps;
-    public Text Question0;
-    public Text Question1;
-    public Text Question2;
-    public Text Question3;
-    public Text Question4;
-
-    public static int point;
+public class Question : MonoBehaviour
+{
+    //create a new text for totalpoint
+    public Text totalpoint;
+    //point for each question
+    public  int point;
+    public  int point1;
+    public  int point2;
+    public  int point3;
+    public int point4;
+    public  int totalpoint1;
     public static float GPA;
-    
+
+
+    //element in each dropdown
     List<string> questions = new List<string>() { "A is member of object B", "B is member of Object A", "Product of A and B", "None of these" };
     List<string> questions1 = new List<string>() { "Operator-&", "Operator-||", "Operator-&&", "Operator +" };
     List<string> questions2 = new List<string>() { "A Slash (/)", "A Fullstop(.)", "A Comma (,)", "A Semicolon (;)" };
@@ -26,7 +29,13 @@ public class Question : MonoBehaviour {
     public Dropdown dropdown3;
     public Dropdown dropdown4;
     // Use this for initialization
-    void Start () {
+    /**
+     * @pre valid questionlist
+     * @post set the vaild questionlist for each question
+     * @para None.
+     **/
+    void Start()
+    {
         questionlist();
         questionlist1();
         questionlist2();
@@ -34,115 +43,172 @@ public class Question : MonoBehaviour {
         questionlist4();
     }
 
-    void questionlist () {
+    /**
+     * @pre valid questionlist
+     * @post add elements into the first dropdown 
+     * @para None.
+     **/
+    void questionlist()
+    {
 
         dropdown.AddOptions(questions);
-        
-	}
 
-    void questionlist2() {
-        
+    }
+
+    /**
+    * @pre valid questionlist
+    * @post add elements into the third dropdown 
+    * @para None.
+    **/
+    void questionlist2()
+    {
+
         dropdown2.AddOptions(questions2);
-        
-	}
+    }
 
+    /**
+    * @pre valid questionlist
+    * @post add elements into the fourth dropdown 
+    * @para None.
+    **/
     void questionlist3()
     {
-
         dropdown3.AddOptions(questions3);
-
     }
 
+    /**
+    * @pre valid questionlist
+    * @post add elements into the fifth dropdown 
+    * @para None.
+    **/
     void questionlist4()
     {
-
-        dropdown4.AddOptions(questions4);;
-
+        dropdown4.AddOptions(questions4); ;
     }
 
-
+    /**
+    * @pre valid questionlist
+    * @post add elements into the second dropdown 
+    * @para None.
+    **/
     void questionlist1()
     {
         dropdown1.AddOptions(questions1);
     }
 
 
-    
+    /**
+    * @pre valid dropdown
+    * @post add elements into the first dropdown 
+    * @para index of anwser(int).
+    **/
     public void DropdownIndex(int index)
     {
-        Question0.text = questions[index]; 
-        if(index==1)
+        if (index == 1)
         {
-            point += 20;
-            Question0.text = point.ToString();
+            point = 10;
+            
         }
         else
         {
-            
-            Question0.text = point.ToString();
+            point = 0;
         }
     }
 
+
+    /**
+    * @pre valid dropdown
+    * @post add elements into the second dropdown 
+    * @para index of anwser(int).
+    **/
     public void DropdownIndex1(int index)
     {
-        Question1.text = questions1[index];
         if (index == 2)
         {
-            point += 20;
-            Question1.text = point.ToString();
+            point1 = 10;
+            
         }
         else
         {
-            
-            Question1.text = point.ToString();
+            point1 = 0;
         }
     }
 
+
+    /**
+    * @pre valid dropdown
+    * @post add elements into the third dropdown 
+    * @para index of anwser(int).
+    **/
     public void DropdownIndex2(int index)
     {
-        Question2.text = questions2[index];
         if (index == 3)
         {
-            point+= 20;
-            Question2.text = point.ToString();
+            point2 = 10;
+            
         }
         else
         {
-
-            Question2.text = point.ToString();
+            point2 = 0;
         }
     }
 
+    /**
+    * @pre valid dropdown
+    * @post add elements into the fourth dropdown 
+    * @para index of anwser(int).
+    **/
     public void DropdownIndex3(int index)
     {
-        Question3.text = questions3[index];
-        if (index == 3)
+        if (index == 1)
         {
-            point += 20;
-            Question3.text = point.ToString();
+            point3 = 10;
+            
         }
         else
         {
-
-            Question3.text = point.ToString();
+            point3 = 0;
         }
     }
 
+
+    /**
+    * @pre valid dropdown
+    * @post add elements into the fifth dropdown 
+    * @para index of anwser(int).
+    **/
     public void DropdownIndex4(int index)
     {
-        Question4.text = questions4[index];
         if (index == 2)
         {
-            point += 20;
-            GPA = point / 100f;
-            Question4.text = point.ToString();
+            point4 = 10;
+            
         }
         else
         {
-
-            Question4.text = point.ToString();
+            point4 = 0;
         }
     }
-   
-}
 
+
+    /**
+    * @pre valid point
+    * @post count the totalpoint 
+    * @para None.
+    **/
+    public void Total()
+
+    {
+        totalpoint1 = point + point1 + point2 + point3 + point4;     
+        GPA = totalpoint1 / 100f;
+    }
+    /**
+     * @pre  None
+     * @post update the total point
+     * @para None.
+     **/
+    public void Update()
+    {
+        Total();
+    }
+}
