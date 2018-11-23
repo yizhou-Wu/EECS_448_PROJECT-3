@@ -8,12 +8,12 @@ public class Question : MonoBehaviour
     //create a new text for totalpoint
     public Text totalpoint;
     //point for each question
-    public static int point;
-    public static int point1;
-    public static int point2;
-    public static int point3;
-    public static int point4;
-    public static int totalpoint1;
+    public  int point;
+    public  int point1;
+    public  int point2;
+    public  int point3;
+    public int point4;
+    public  int totalpoint1;
     public static float GPA;
 
 
@@ -106,7 +106,7 @@ public class Question : MonoBehaviour
     {
         if (index == 1)
         {
-            point = 20;
+            point = 10;
             
         }
         else
@@ -125,7 +125,7 @@ public class Question : MonoBehaviour
     {
         if (index == 2)
         {
-            point1 = 20;
+            point1 = 10;
             
         }
         else
@@ -144,7 +144,7 @@ public class Question : MonoBehaviour
     {
         if (index == 3)
         {
-            point2 = 20;
+            point2 = 10;
             
         }
         else
@@ -160,9 +160,9 @@ public class Question : MonoBehaviour
     **/
     public void DropdownIndex3(int index)
     {
-        if (index == 3)
+        if (index == 1)
         {
-            point3 = 20;
+            point3 = 10;
             
         }
         else
@@ -181,7 +181,7 @@ public class Question : MonoBehaviour
     {
         if (index == 2)
         {
-            point4 = 20;
+            point4 = 10;
             
         }
         else
@@ -196,7 +196,7 @@ public class Question : MonoBehaviour
     * @post count the totalpoint 
     * @para None.
     **/
-    public void total()
+    public void Total()
 
     {
         totalpoint1 = point + point1 + point2 + point3 + point4;     
@@ -209,6 +209,6 @@ public class Question : MonoBehaviour
      **/
     public void Update()
     {
-        total();
+        Total();
     }
 }

@@ -34,6 +34,16 @@ public class Eventtrigger : MonoBehaviour
             SceneManager.LoadScene("test");
             collision.isTrigger = false;
         }
+        else if (collision.gameObject.tag == "shop")
+        {
+            SceneManager.LoadScene("shop");
+            collision.isTrigger = false;
+        }
+        else if (collision.gameObject.tag == "Final")
+        {
+            SceneManager.LoadScene("Final");
+            collision.isTrigger = false;
+        }
         else if (collision.gameObject.tag == "ShotGame")
         {
             SceneManager.LoadScene("EECS268");

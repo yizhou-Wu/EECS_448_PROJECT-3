@@ -37,7 +37,11 @@ public class SwitchSceneButton : MonoBehaviour
     **/
     void OnMouseDown()
     {
-        PlayerManager.GPA = Question.GPA;
+        PlayerManager.GPA = Question.GPA+Question1.GPA1;
+       // Debug.Log(Question.GPA);
+        //Debug.Log(Question1.GPA1);
+        //Debug.Log(PlayerManager.GPA);
+        PlayerManager.Money = item.totalmoney;
         //go.SetActive(true);
         Application.LoadLevel(LevelToLoad);
         

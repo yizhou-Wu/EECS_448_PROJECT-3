@@ -13,6 +13,7 @@ public class PlayerManager : MonoBehaviour {
     // Update is called once per frame
     public static float Movespeed;// The move speed of the charater.
     public static float GPA;// The global 
+    public static float Money;//The global
     float i = 1;// Counter that prevent the user to move multiple times.
     private static bool playerExist;// Flag to check whether the player is existing on current screnn;
     /**
