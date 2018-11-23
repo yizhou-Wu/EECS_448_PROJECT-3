@@ -1,0 +1,3 @@
+character: https://en.wikipedia.org/wiki/Kansas_Jayhawks#/media/File:Kansas_Jayhawks_logo.svg
+dice:https://www.kisspng.com/png-pixel-art-royalty-free-rolling-dice-4456418/
+background:http://www.kansan.com/news/ku-pays-in-secret-title-ix-settlement/article_7f388d3c-6e8f-11e8-959b-6f42bb2d0e5d.html
