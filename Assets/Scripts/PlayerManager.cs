@@ -38,8 +38,7 @@ public class PlayerManager : MonoBehaviour {
     * @para None.
     **/
     void Update ()
-    {
-        
+    {   
         if (i >= 1)
         {
             if (Input.GetKey(KeyCode.RightArrow))//Move right.
@@ -57,7 +56,7 @@ public class PlayerManager : MonoBehaviour {
             
         }
         i += Time.deltaTime;//Counter increase.
-        if(Health<=0)
+        if(Health<10)
         {
             FindObjectOfType<GameManager>().EndGame();
         }
