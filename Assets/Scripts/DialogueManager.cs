@@ -7,9 +7,13 @@ using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour {
     public RandomEvent m_event;
     public Text eventName;
-    public Text text;
+    public Text eventText;
+    public Text Result;
+    public Text ResultText;
+    public GameObject Basepanel;
+    public GameObject Resultpanel;
     private Queue<string> sentences;
-    public int DiceNum;
+    private int DiceNum;
     public void Start()
     {
         sentences = new Queue<string>();
@@ -22,7 +26,7 @@ public class DialogueManager : MonoBehaviour {
 
         DisplayNextSentence();
     }
-    public void DisplayNextSentence()
+    void DisplayNextSentence()
     {
         if (sentences.Count == 0)
         {
@@ -31,33 +35,91 @@ public class DialogueManager : MonoBehaviour {
             SceneManager.LoadScene("base");
         }
         string sentence = sentences.Dequeue();
-        text.text = sentence;
+        eventText.text = sentence;
     }
-    public void EndDialogue()
+    void EndDialogue()
     {
            Debug.Log("end of it");
     }
-    public void RollDice()
+    void RollDice()
     {
         DiceNum = Random.Range(1,6);
-        Debug.Log(DiceNum);
     }
-    public void ResultGenerate()
+    public void Goback()
     {
+        SceneManager.LoadScene("base");
+    }
+    public void ResultGenerate_1()//Dating
+    {
+
         RollDice();
+        Basepanel.SetActive(false);
+        Resultpanel.SetActive(true);
         if(DiceNum==1||DiceNum==2||DiceNum==3)
         {
-
-            UnityEditor.EditorUtility.DisplayDialog("Worst Case!", "Sadly,The gril turned down your invitation.Nothing happened", "Okay");
-            SceneManager.LoadScene("base");
+            Result.text = "Worst Case!";
+            ResultText.text = "Sadly,The gril turned down your invitation.Nothing happened.";
         }
         else
         {
-            Debug.Log(PlayerManager.Money);
             PlayerManager.Money -= 50;
-            Debug.Log(PlayerManager.Money);
-            UnityEditor.EditorUtility.DisplayDialog("Best Case!", "She accepted your invitation and you had a nice meal. You cost 50$.", "Okay");
-            SceneManager.LoadScene("base");
+            Result.text = "Best Case!";
+            ResultText.text = "She accepted your invitation and you had a nice meal. You cost 50$";
+        }
+    }
+    public void ResultGenerate_2()//Work
+    {
+        RollDice();
+        Basepanel.SetActive(false);
+        Resultpanel.SetActive(true);
+        if (DiceNum == 1 || DiceNum == 2 || DiceNum == 3)
+        {
+            PlayerManager.Money += 5;
+            Result.text = "Worst Case!";
+            ResultText.text = "Work was as you expected it to be: bad.No tips were handed out.You earned $5";
+        }
+        else
+        {
+            PlayerManager.Money += 15;
+            Result.text = "Best Case!";
+            ResultText.text = "Work went well. You are not very tired and got some good tips.  You have earned $15";
+        }
+    }
+    public void ResultGenerate_3()//Rain
+    {
+        RollDice();
+        Basepanel.SetActive(false);
+        Resultpanel.SetActive(true);
+        if (DiceNum == 1 || DiceNum == 2 || DiceNum == 3)
+        {
+            PlayerManager.GPA -= 0.1f;
+            PlayerManager.Money -= 10;
+            Result.text = "Worst Case!";
+            ResultText.text = "Oh no!Water has seeped into your bag and as a result, your homework is ruined and your laptop is broken, lowering your GPA.";
+        }
+        else
+        {
+            Result.text = "Best Case!";
+            ResultText.text = "You are a little wet, but your homework and laptop are safe.  Get to class.";
+        }
+    }
+    public void ResultGenerate_4()//sick
+    {
+        RollDice(); 
+        Basepanel.SetActive(false);
+        Resultpanel.SetActive(true);
+        if (DiceNum == 1 || DiceNum == 2 || DiceNum == 3)
+        {
+            PlayerManager.GPA -= 0.1f;
+            PlayerManager.Health -= 10;
+            Result.text = "Worst Case!";
+            ResultText.text = "You try to get out of bed but you can’t.Even sending emails is too hard.  Ouch, that hurts...your GPA that is.";
+        }
+        else
+        {
+            PlayerManager.Health -= 5;
+            Result.text = "Worst Case!";
+            ResultText.text = "You fight and fight and manage to get all of your work done.You are tired, but it all worked out.";
         }
     }
 
