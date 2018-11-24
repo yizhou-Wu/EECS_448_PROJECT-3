@@ -1722,7 +1722,7 @@ GameObject:
   - component: {fileID: 1627453375}
   m_Layer: 0
   m_Name: Stage1
-  m_TagString: TEST
+  m_TagString: RE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1923,7 +1923,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a379582753d5e0a4798626a3c8e64d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restartDelay: 1
   EndGameUI: {fileID: 571977228}
 --- !u!1 &1834851337
 GameObject:

@@ -16,9 +16,9 @@ public class PlayerManager : MonoBehaviour {
     public static float GPA;// The global 
     float i = 1;// Counter that prevent the user to move multiple times.
     //private static bool playerExist;// Flag to check whether the player is existing on current screnn;
-    public static float Health=20f;
+    public static float Health=30f;
     public static float Money=50f;
-    private static bool GameHasEnded = false;
+    //private bool GameHasEnded = f;
     /**
     * @pre None.
     * @post Keep the GameObject player when change the scene because unity destroy eveything on current scene after change scenes.
@@ -26,19 +26,17 @@ public class PlayerManager : MonoBehaviour {
     **/
     void Start()
     {
-        Debug.Log(GameHasEnded);
-        if (GameHasEnded == true)
+        if (GameManager.GameHasEnded == true)
         {
             Health = 100f;
             Money = 50f;
-            Debug.Log("true");
+            GameManager.GameHasEnded = false;
         }
         DontDestroyOnLoad(this);
         if (FindObjectsOfType(GetType()).Length > 1)
         {
             Destroy(gameObject);
         }
-        Debug.Log("Start");
     }
     /**
     * @pre None.
@@ -47,7 +45,6 @@ public class PlayerManager : MonoBehaviour {
     **/
     void Update ()
     {
-  
         if (i >= 1)
         {
             if (Input.GetKey(KeyCode.RightArrow))//Move right.
@@ -67,15 +64,15 @@ public class PlayerManager : MonoBehaviour {
         i += Time.deltaTime;//Counter increase.
         if(Health<10)
         {
-            
-            GameHasEnded = true;
+            GameManager.GameHasEnded = true;
             FindObjectOfType<GameManager>().EndGame();
             enabled = false;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (GameHasEnded == false)
+        //Debug.Log(GameManager.GameHasEnded);
+        if (GameManager.GameHasEnded == false)
         {
             if (collision.gameObject.tag == "Midterm")
             {
@@ -97,6 +94,11 @@ public class PlayerManager : MonoBehaviour {
                 SceneManager.LoadScene("EECS268");
                 collision.isTrigger = false;
                 gameObject.SetActive(false);
+            }
+            else if (collision.gameObject.tag=="RE")
+            {
+                int levelnum=Random.Range(6, 9);
+                SceneManager.LoadScene(levelnum);
             }
         }
     }

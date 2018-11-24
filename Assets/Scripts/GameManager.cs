@@ -4,16 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
-    bool GameHasEnded = false;
+    public static bool GameHasEnded = false;
     public GameObject EndGameUI;
     public void EndGame()
     {
-        if (GameHasEnded == false)
-        {
             GameHasEnded = true;
             Debug.Log("game over!");
             EndGameUI.SetActive(true);        
-        }
     }
     public void Restart()
     {
@@ -22,7 +19,9 @@ public class GameManager : MonoBehaviour {
             Destroy(o);
         }
         EndGameUI.SetActive(false);
+
         SceneManager.LoadScene("base");
+       
     }
     public void ExitGame()
     {

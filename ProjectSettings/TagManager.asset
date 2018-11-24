@@ -12,6 +12,7 @@ TagManager:
   - ShotGame
   - Hole
   - Enemy
+  - RE
   layers:
   - Default
   - TransparentFX
