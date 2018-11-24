@@ -16,29 +16,5 @@ public class Eventtrigger : MonoBehaviour
     * @post Load the scene depending on the collision tag.
     * @para The objects that collide.
     **/
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
 
-        if (collision.gameObject.tag == "Midterm")
-        {
-            SceneManager.LoadScene("Midterm");
-            collision.isTrigger = false;//Turn off the trigger so that the user cannot go back.
-        }
-        else if(collision.gameObject.tag == "Tic")
-        {
-            SceneManager.LoadScene("Tic");
-            collision.isTrigger = false;
-        }
-        else if (collision.gameObject.tag == "TEST")
-        {
-            SceneManager.LoadScene("randomE");
-            collision.isTrigger = false;
-        }
-        else if (collision.gameObject.tag == "ShotGame")
-        {
-            SceneManager.LoadScene("EECS268");
-            collision.isTrigger = false;
-            gameObject.SetActive(false);
-        }
-    }
 }

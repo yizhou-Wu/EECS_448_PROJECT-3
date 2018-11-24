@@ -7,6 +7,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour {
 
@@ -15,8 +16,9 @@ public class PlayerManager : MonoBehaviour {
     public static float GPA;// The global 
     float i = 1;// Counter that prevent the user to move multiple times.
     //private static bool playerExist;// Flag to check whether the player is existing on current screnn;
-    public static float Health=100.0f;
-    public static float Money=100.0f;
+    public static float Health=20f;
+    public static float Money=50f;
+    private static bool GameHasEnded = false;
     /**
     * @pre None.
     * @post Keep the GameObject player when change the scene because unity destroy eveything on current scene after change scenes.
@@ -24,13 +26,19 @@ public class PlayerManager : MonoBehaviour {
     **/
     void Start()
     {
+        Debug.Log(GameHasEnded);
+        if (GameHasEnded == true)
+        {
+            Health = 100f;
+            Money = 50f;
+            Debug.Log("true");
+        }
         DontDestroyOnLoad(this);
         if (FindObjectsOfType(GetType()).Length > 1)
         {
             Destroy(gameObject);
         }
-
-
+        Debug.Log("Start");
     }
     /**
     * @pre None.
@@ -38,7 +46,8 @@ public class PlayerManager : MonoBehaviour {
     * @para None.
     **/
     void Update ()
-    {   
+    {
+  
         if (i >= 1)
         {
             if (Input.GetKey(KeyCode.RightArrow))//Move right.
@@ -58,7 +67,37 @@ public class PlayerManager : MonoBehaviour {
         i += Time.deltaTime;//Counter increase.
         if(Health<10)
         {
+            
+            GameHasEnded = true;
             FindObjectOfType<GameManager>().EndGame();
+            enabled = false;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (GameHasEnded == false)
+        {
+            if (collision.gameObject.tag == "Midterm")
+            {
+                SceneManager.LoadScene("Midterm");
+                collision.isTrigger = false;//Turn off the trigger so that the user cannot go back.
+            }
+            else if (collision.gameObject.tag == "Tic")
+            {
+                SceneManager.LoadScene("Tic");
+                collision.isTrigger = false;
+            }
+            else if (collision.gameObject.tag == "TEST")
+            {
+                SceneManager.LoadScene("randomE1");
+                collision.isTrigger = false;
+            }
+            else if (collision.gameObject.tag == "ShotGame")
+            {
+                SceneManager.LoadScene("EECS268");
+                collision.isTrigger = false;
+                gameObject.SetActive(false);
+            }
         }
     }
 }

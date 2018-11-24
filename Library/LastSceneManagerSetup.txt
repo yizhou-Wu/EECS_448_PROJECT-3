@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/randomE4.unity
+- path: Assets/Scenes/Base.unity
   isLoaded: 1
   isActive: 1

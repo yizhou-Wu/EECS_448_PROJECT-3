@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     bool GameHasEnded = false;
-    public float restartDelay = 1f;
     public GameObject EndGameUI;
     public void EndGame()
     {
@@ -13,7 +12,7 @@ public class GameManager : MonoBehaviour {
         {
             GameHasEnded = true;
             Debug.Log("game over!");
-            EndGameUI.SetActive(true);
+            EndGameUI.SetActive(true);        
         }
     }
     public void Restart()
@@ -22,12 +21,16 @@ public class GameManager : MonoBehaviour {
         {
             Destroy(o);
         }
+        EndGameUI.SetActive(false);
         SceneManager.LoadScene("base");
-        //Destroy(all);
     }
     public void ExitGame()
     {
         Application.Quit();
+    }
+    public void SwitchScene()
+    {
+
     }
 
 }
