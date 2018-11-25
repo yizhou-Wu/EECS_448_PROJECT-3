@@ -39,6 +39,7 @@ public class SwitchSceneButton : MonoBehaviour
     {
         PlayerManager.GPA = Question.GPA;
         //go.SetActive(true);
+        PlayerManager.AllowUse = true;
         Application.LoadLevel(LevelToLoad);
         
     }

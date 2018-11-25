@@ -580,7 +580,7 @@ GameObject:
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!81 &519420029
 AudioListener:
@@ -598,7 +598,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.6627451, g: 0.654902, b: 0.7568628, a: 1}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1096,7 +1096,6 @@ GameObject:
   - component: {fileID: 770517772}
   - component: {fileID: 770517771}
   - component: {fileID: 770517770}
-  - component: {fileID: 770517773}
   - component: {fileID: 770517774}
   - component: {fileID: 770517775}
   m_Layer: 0
@@ -1176,17 +1175,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &770517773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 770517769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46bb5a387f696e54597b0583a30e656d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &770517774
 Rigidbody2D:
   serializedVersion: 4
@@ -1722,7 +1710,7 @@ GameObject:
   - component: {fileID: 1627453375}
   m_Layer: 0
   m_Name: Stage1
-  m_TagString: RE
+  m_TagString: Midterm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1924,6 +1912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndGameUI: {fileID: 571977228}
+  user: {fileID: 770517769}
 --- !u!1 &1834851337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,6 +2286,47 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2077191775}
   m_CullTransparentMesh: 0
+--- !u!1 &2080733584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2080733586}
+  - component: {fileID: 2080733585}
+  m_Layer: 0
+  m_Name: TestSuite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2080733585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2080733584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed28fa478aa7e4066aaa78b819a09693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  user: {fileID: 770517774}
+--- !u!4 &2080733586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2080733584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25.805845, y: -15.144353, z: 0.28125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2109660753
 GameObject:
   m_ObjectHideFlags: 0

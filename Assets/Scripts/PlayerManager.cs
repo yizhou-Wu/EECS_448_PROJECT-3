@@ -18,6 +18,7 @@ public class PlayerManager : MonoBehaviour {
     //private static bool playerExist;// Flag to check whether the player is existing on current screnn;
     public static float Health=30f;
     public static float Money=50f;
+    public static bool AllowUse = true;
     //private bool GameHasEnded = f;
     /**
     * @pre None.
@@ -26,6 +27,8 @@ public class PlayerManager : MonoBehaviour {
     **/
     void Start()
     {
+        gameObject.SetActive(true);
+        Debug.Log("111222");
         if (GameManager.GameHasEnded == true)
         {
             Health = 100f;
@@ -45,7 +48,7 @@ public class PlayerManager : MonoBehaviour {
     **/
     void Update ()
     {
-        if (i >= 1)
+        if (i >= 1&&AllowUse==true)
         {
             if (Input.GetKey(KeyCode.RightArrow))//Move right.
             {
@@ -76,28 +79,34 @@ public class PlayerManager : MonoBehaviour {
         {
             if (collision.gameObject.tag == "Midterm")
             {
+                //gameObject.SetActive(false);
+                AllowUse = false;
                 SceneManager.LoadScene("Midterm");
                 collision.isTrigger = false;//Turn off the trigger so that the user cannot go back.
             }
             else if (collision.gameObject.tag == "Tic")
             {
+                AllowUse = false;
                 SceneManager.LoadScene("Tic");
                 collision.isTrigger = false;
             }
             else if (collision.gameObject.tag == "TEST")
             {
+                AllowUse = false;
                 SceneManager.LoadScene("randomE1");
                 collision.isTrigger = false;
             }
             else if (collision.gameObject.tag == "ShotGame")
             {
+                AllowUse = false;
                 SceneManager.LoadScene("EECS268");
                 collision.isTrigger = false;
                 gameObject.SetActive(false);
             }
             else if (collision.gameObject.tag=="RE")
             {
-                int levelnum=Random.Range(6, 9);
+                AllowUse = false;
+                int levelnum =Random.Range(6, 9);
                 SceneManager.LoadScene(levelnum);
             }
         }

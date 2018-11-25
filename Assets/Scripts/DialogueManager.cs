@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour {
     public GameObject Basepanel;
     public GameObject Resultpanel;
     private Queue<string> sentences;
-    private int DiceNum;
+    public static int DiceNum;
     public void Start()
     {
         sentences = new Queue<string>();

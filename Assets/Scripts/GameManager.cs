@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
+    public static bool testmode = true;
     public static bool GameHasEnded = false;
     public GameObject EndGameUI;
+    public GameObject user;
     public void EndGame()
     {
             GameHasEnded = true;
@@ -27,7 +29,7 @@ public class GameManager : MonoBehaviour {
     {
         Application.Quit();
     }
-    public void SwitchScene()
+    public void Start()
     {
 
     }
