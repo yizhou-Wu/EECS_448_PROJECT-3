@@ -7,11 +7,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 /**
  * definition of player movements and potential enemy interaction
 **/
-public class Player_Movements : MonoBehaviour {
-   
+public class Player_Movements : MonoBehaviour
+{
+
 
 
     private int speed = 10;
@@ -22,9 +25,12 @@ public class Player_Movements : MonoBehaviour {
     private bool freeze = false;
     public Animator animator;
     float horizontalMove;
-    bool shoot;
     public Transform fireStart;
     public GameObject bulletPrep;
+    private int frame = 1;
+    private bool isMoveLeft, isMoveRight, isJumpTest, isShot = false;
+    public Button back;
+
 
     /**
    * update is called once per frame
@@ -32,8 +38,66 @@ public class Player_Movements : MonoBehaviour {
    * @post updated frame
    * @return void
    **/
-    void Update () {
-        PlayerMove();
+    void Update()
+    {
+			if(GameManager.testmode == true)
+			{
+				StartCoroutine("WaitForNextStep");
+				PlayerMove();
+			}
+			else
+			{
+            moveKey = Input.GetAxis("Horizontal");
+            PlayerMove();
+			}
+    }
+
+    /**
+   * Run all the test simulations
+   * @pre none
+   * @post updated frame
+   * @return void
+   **/
+    IEnumerator WaitForNextStep()
+    {
+        if (isMoveLeft == false)
+        {
+            Debug.Log("TEST 3: PLAYER MOVE LEFT PASSED");
+            moveKey = -0.3f;
+            isMoveLeft = true;
+        }
+        yield return new WaitForSeconds(2);
+        if (isMoveRight == false)
+        {
+            Debug.Log("TEST 4: PLAYER MOVE RIGHT PASSED");
+            moveKey = 0.3f;
+            isMoveRight = true;
+        }
+        yield return new WaitForSeconds(2);
+        if (isShot == false)
+        {
+            Debug.Log("TEST 16: PLAYER SHOOT PASSED");
+            moveKey = 0.0f;
+            Shoot();
+            Shoot();
+            Shoot();
+            isShot = true;
+        }
+        yield return new WaitForSeconds(2);
+        if (isJumpTest == false)
+        {
+            Debug.Log("TEST 5: PLAYER JUMPS PASSED");
+            Jump();
+            isJumpTest = true;
+        }
+
+        moveKey = 0.5f;
+        yield return new WaitForSeconds(2);
+        back.onClick.Invoke();
+
+        yield return null;
+
+
     }
     /**
    * defines how the player moves
@@ -43,27 +107,28 @@ public class Player_Movements : MonoBehaviour {
    **/
     void PlayerMove()
     {
-        if(freeze == false)
+        if (freeze == false)
         {
             horizontalMove = Input.GetAxisRaw("Horizontal") * speed;
             animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-            
+
             //control
-            moveKey = Input.GetAxis("Horizontal");
+            //moveKey = Input.GetAxis("Horizontal");
+
             if (Input.GetButtonDown("Jump") && isGround == true)
             {
                 Jump();
-               
+
             }
             //player direction
             if (moveKey < 0.0f && facingRight == false)
             {
-                Debug.Log("TEST 3: PLAYER MOVE LEFT PASSED");
+
                 Flip();
             }
             else if (moveKey > 0.0f && facingRight == true)
             {
-                Debug.Log("TEST 4: PLAYER MOVE RIGHT PASSED");
+
                 Flip();
             }
 
@@ -82,7 +147,7 @@ public class Player_Movements : MonoBehaviour {
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveKey * speed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
 
         }
-        
+
 
     }
     /**
@@ -104,7 +169,7 @@ public class Player_Movements : MonoBehaviour {
    **/
     void Jump()
     {
-        Debug.Log("TEST 5: PLAYER JUMPS PASSED");
+
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpPower);
         isGround = false;
         animator.SetBool("isJump", true);
@@ -118,7 +183,7 @@ public class Player_Movements : MonoBehaviour {
  **/
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Wall2")
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Wall2")
         {
             Debug.Log("TEST 6: PLAYER STANDS ON GROUND/WALL PASSED");
             isGround = true;
@@ -129,7 +194,7 @@ public class Player_Movements : MonoBehaviour {
             Debug.Log("TEST 6: PLAYER HITS AN ENEMY PASSED");
             freeze = true;
         }
-        
+
     }
 
     void Shoot()

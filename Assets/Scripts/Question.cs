@@ -14,6 +14,7 @@ public class Question : MonoBehaviour
     public static int point3;
     public static int point4;
     public static int totalpoint1;
+    public static int totalpoint2;
     public static float GPA;
 
 
@@ -102,11 +103,11 @@ public class Question : MonoBehaviour
     * @post add elements into the first dropdown 
     * @para index of anwser(int).
     **/
-    public static void DropdownIndex(int index)
+    public  void DropdownIndex(int index)
     {
         if (index == 1)
         {
-            totalpoint1 += 20;
+            totalpoint1 += 10;
         }
         else
         {
@@ -120,11 +121,11 @@ public class Question : MonoBehaviour
     * @post add elements into the second dropdown 
     * @para index of anwser(int).
     **/
-    public static void DropdownIndex1(int index)
+    public void DropdownIndex1(int index)
     {
         if (index == 2)
         {
-            totalpoint1 += 20;
+            totalpoint1 += 10;
 
         }
         else
@@ -139,11 +140,11 @@ public class Question : MonoBehaviour
     * @post add elements into the third dropdown 
     * @para index of anwser(int).
     **/
-    public static void DropdownIndex2(int index)
+    public void DropdownIndex2(int index)
     {
         if (index == 3)
         {
-            totalpoint1 += 20;
+            totalpoint1 += 10;
 
         }
         else
@@ -157,11 +158,11 @@ public class Question : MonoBehaviour
     * @post add elements into the fourth dropdown 
     * @para index of anwser(int).
     **/
-    public static void DropdownIndex3(int index)
+    public  void DropdownIndex3(int index)
     {
         if (index == 3)
         {
-            totalpoint1 += 20;
+            totalpoint1 += 10;
 
         }
         else
@@ -176,11 +177,11 @@ public class Question : MonoBehaviour
     * @post add elements into the fifth dropdown 
     * @para index of anwser(int).
     **/
-    public static void DropdownIndex4(int index)
+    public void DropdownIndex4(int index)
     {
         if (index == 2)
         {
-            totalpoint1 += 20;
+            totalpoint1 += 10;
 
         }
         else
@@ -198,8 +199,8 @@ public class Question : MonoBehaviour
     public void total()
 
     {
-        totalpoint1 = point + point1 + point2 + point3 + point4;     
-        GPA = totalpoint1 / 100f;
+        
+        //PlayerManager.GPA = totalpoint1 / 100f;
     }
     /**
      * @pre  None
@@ -209,5 +210,95 @@ public class Question : MonoBehaviour
     public void Update()
     {
         total();
+    }
+
+    /**
+    * @pre valid dropdown
+    * @post add elements into the fourth dropdown 
+    * @para index of anwser(int).
+    **/
+    public static void DropdownIndex_T(int index)
+    {
+        if (index == 1)
+        {
+            totalpoint2 += 10;
+
+        }
+        else
+        {
+            point = 0;
+        }
+    }
+
+    /**
+    * @pre valid dropdown
+    * @post add elements into the first dropdown 
+    * @para index of anwser(int).
+    **/
+    public static void DropdownIndex1_T(int index)
+    {
+        if (index == 1)
+        {
+            totalpoint2 += 10;
+
+        }
+        else
+        {
+            point = 0;
+        }
+    }
+
+    /**
+    * @pre valid dropdown
+    * @post add elements into the second dropdown 
+    * @para index of anwser(int).
+    **/
+    public static void DropdownIndex2_T(int index)
+    {
+        if (index == 1)
+        {
+            totalpoint2 += 10;
+
+        }
+        else
+        {
+            point = 0;
+        }
+    }
+
+    /**
+   * @pre valid dropdown    
+   * @post add elements into the third dropdown 
+   * @para index of anwser(int).
+   **/
+    public static void DropdownIndex3_T(int index)
+    {
+        if (index == 1)
+        {
+            totalpoint2 += 10;
+
+        }
+        else
+        {
+            point = 0;
+        }
+    }
+
+    /**
+    * @pre valid dropdown
+    * @post add elements into the fourth dropdown 
+    * @para index of anwser(int).
+    **/
+    public static void DropdownIndex4_T(int index)
+    {
+        if (index == 1)
+        {
+            totalpoint2 += 10;
+
+        }
+        else
+        {
+            point = 0;
+        }
     }
 }

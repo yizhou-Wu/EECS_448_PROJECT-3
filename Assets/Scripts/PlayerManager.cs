@@ -17,7 +17,7 @@ public class PlayerManager : MonoBehaviour
     public static float GPA;// The global 
     float i = 1;// Counter that prevent the user to move multiple times.
     //private static bool playerExist;// Flag to check whether the player is existing on current screnn;
-    public static float Health = 80f;
+    public static float Health = 100f;
     public static float Money = 100f;
     public static bool AllowUse = true;
     public static string userName;
@@ -78,9 +78,15 @@ public class PlayerManager : MonoBehaviour
             enabled = false;
         }
     }
+    /**
+    * @pre None.
+    * @post Load scenes depending on the tag of the collision.
+    * @para None.   
+    **/
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log(GameManager.GameHasEnded);
+        Debug.Log("1111");
+        Debug.Log(AllowUse);
         if (GameManager.GameHasEnded == false&&AllowUse==true)
         {
 
@@ -129,7 +135,7 @@ public class PlayerManager : MonoBehaviour
                 //gameObject.SetActive(false);
                 AllowUse = false;
                 collision.isTrigger = false;
-                int levelnum = Random.Range(6, 10);
+                int levelnum = Random.Range(7, 10);
                 SceneManager.LoadScene(levelnum);
             }
         }

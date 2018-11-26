@@ -12868,6 +12868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a379582753d5e0a4798626a3c8e64d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EndGameUI: {fileID: 0}
 --- !u!4 &1294597063
 Transform:
   m_ObjectHideFlags: 0
@@ -15992,6 +15993,7 @@ GameObject:
   - component: {fileID: 1625075281}
   - component: {fileID: 1625075282}
   - component: {fileID: 1625075284}
+  - component: {fileID: 1625075283}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -16131,6 +16133,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: {fileID: 1228411129}
   intro: {fileID: 137571958}
+--- !u!114 &1625075283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625075276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55e8b614919a7d448afe905fdfa02bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1625075284}
+  fireStart: {fileID: 932599464}
+  bulletPrep: {fileID: 1423753264329754, guid: e179085c7f984f64cbe12de036b6b5b4, type: 2}
+  back: {fileID: 1101614693}
 --- !u!95 &1625075284
 Animator:
   serializedVersion: 3

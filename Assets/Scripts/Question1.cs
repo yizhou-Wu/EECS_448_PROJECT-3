@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/** 
+ * @author Team FourFour8
+ * @file DialogueManager.cs
+ * @date Nov 2018
+ * @brief DialogueManager class. This class takes charge of the properties of the DialogueManager.
+**/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +21,7 @@ public class Question1 : MonoBehaviour
     public static int point3;
     public static int point4;
     public static int totalpoint1;
+    public static int totalpoint2;
     public  static float GPA1;
 
 
@@ -103,7 +110,7 @@ public class Question1 : MonoBehaviour
     * @post add elements into the first dropdown 
     * @para index of anwser(int).
     **/
-    public static void DropdownIndex(int index)
+    public  void DropdownIndex(int index)
     {
         if (index == 1)
         {
@@ -122,7 +129,7 @@ public class Question1 : MonoBehaviour
     * @post add elements into the second dropdown 
     * @para index of anwser(int).
     **/
-    public static void DropdownIndex1(int index)
+    public void DropdownIndex1(int index)
     {
         if (index == 3)
         {
@@ -141,7 +148,7 @@ public class Question1 : MonoBehaviour
     * @post add elements into the third dropdown 
     * @para index of anwser(int).
     **/
-    public static void DropdownIndex2(int index)
+    public  void DropdownIndex2(int index)
     {
         if (index == 2)
         {
@@ -159,7 +166,7 @@ public class Question1 : MonoBehaviour
     * @post add elements into the fourth dropdown 
     * @para index of anwser(int).
     **/
-    public static void DropdownIndex3(int index)
+    public  void DropdownIndex3(int index)
     {
         if (index == 2)
         {
@@ -178,7 +185,7 @@ public class Question1 : MonoBehaviour
     * @post add elements into the fifth dropdown 
     * @para index of anwser(int).
     **/
-    public static void DropdownIndex4(int index)
+    public void DropdownIndex4(int index)
     {
         if (index == 2)
         {
@@ -200,8 +207,7 @@ public class Question1 : MonoBehaviour
     public void Total()
 
     {
-        totalpoint1 = point + point1 + point2 + point3 + point4;     
-        GPA1 = totalpoint1 / 100f;
+        //PlayerManager.GPA = totalpoint1 / 100f;
     }
     /**
      * @pre  None
@@ -211,5 +217,96 @@ public class Question1 : MonoBehaviour
     public void Update()
     {
         Total();
+    }
+
+
+    /**
+     * @pre  None
+     * @post update the total point
+     * @para None.
+     **/
+    public static void DropdownIndex_T(int index)
+    {
+        if (index == 1)
+        {
+            totalpoint2 += 10;
+
+        }
+        else
+        {
+            point = 0;
+        }
+    }
+
+    /**
+     * @pre  None
+     * @post update the total point
+     * @para None.
+     **/
+    public static void DropdownIndex1_T(int index)
+    {
+        if (index == 3)
+        {
+            totalpoint2 += 10;
+
+        }
+        else
+        {
+            point = 0;
+        }
+    }
+
+    /**
+     * @pre  None
+     * @post update the total point
+     * @para None.
+     **/
+    public static void DropdownIndex2_T(int index)
+    {
+        if (index == 2)
+        {
+            totalpoint2 += 10;
+
+        }
+        else
+        {
+            point = 0;
+        }
+    }
+
+    /**
+     * @pre  None
+     * @post update the total point
+     * @para None.
+     **/
+    public static void DropdownIndex3_T(int index)
+    {
+        if (index == 2)
+        {
+            totalpoint2 += 10;
+
+        }
+        else
+        {
+            point = 0;
+        }
+    }
+
+    /**
+     * @pre  None
+     * @post update the total point
+     * @para None.
+     **/
+    public static void DropdownIndex4_T(int index)
+    {
+        if (index == 2)
+        {
+            totalpoint2 += 10;
+
+        }
+        else
+        {
+            point = 0;
+        }
     }
 }

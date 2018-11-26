@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/** 
+ * @author Team FourFour8
+ * @file TestSuite.cs
+ * @date Nov 2018
+ * @brief MidtermTest class. This class takes charge of the properties of the TestSuite.
+**/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +12,11 @@ public class TestSuite : MonoBehaviour {
 
     public Rigidbody2D user;
 
+    /**
+    * @pre None.
+    * @post Run the functions automaticlly.
+    * @para None.   
+    **/
     void Start()
     {
         DontDestroyOnLoad(this);
@@ -15,7 +26,7 @@ public class TestSuite : MonoBehaviour {
         }
         if (GameManager.testmode == true)
         {
-            Debug.Log("test");
+            //Debug.Log("test");
             Invoke("MoveRightTest", 1);
             Invoke("MoveLeftTest", 3);
             Invoke("MoveRightTest", 5);
@@ -30,15 +41,27 @@ public class TestSuite : MonoBehaviour {
         }
 
     }
+    /**
+    * @pre None.
+    * @post Simulate the move function in the playermanager
+    * @para None.   
+    **/
     void MoveLeftTest()
     {
         user.transform.position += new Vector3(-20, 0, 0);
+        PlayerManager.Health -= 10;
         Debug.Log("MOVE LEFT PASS");
 
     }
+    /**
+    * @pre None.
+    * @post Simulate the move function in the playermanager
+    * @para None.   
+    **/
     void MoveRightTest()
     {
         user.transform.position += new Vector3(20, 0, 0);
+        PlayerManager.Health -= 10;
         Debug.Log("MOVE RIGHT PASS");
     }
 }

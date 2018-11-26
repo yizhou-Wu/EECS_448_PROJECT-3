@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/** 
+ * @author Team FourFour8
+ * @file ShopTest.cs
+ * @date Nov 2018
+ * @brief MidtermTest class. This class takes charge of the properties of the ShopTest.
+**/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +18,11 @@ public class ShopTest : MonoBehaviour {
     public Button book2;
     public Button book3;
     public Button back;
+    /**
+    * @pre None.
+    * @post Run the functions
+    * @para None.   
+    **/
     void Start ()
     {
 		if(GameManager.testmode==true)
@@ -20,9 +31,12 @@ public class ShopTest : MonoBehaviour {
             PlayerManager.AllowUse = true;
         }
 	}
-	
-	// Update is called once per frame
-	void TestClick()
+    /**
+    * @pre None.
+    * @post Click the buttons in the shop to test if the money of the user changed.
+    * @para None.   
+    **/
+    void TestClick()
     {
         float initial = PlayerManager.Money;
         Debug.Log("BEFORE ENTERING THE SHOP, REMAIN MONEY:" + PlayerManager.Money);
@@ -42,6 +56,6 @@ public class ShopTest : MonoBehaviour {
         {
             Debug.Log("ShopTest PASSED");
         }
-        book1.onClick.Invoke();
+        back.onClick.Invoke();
     }
 }

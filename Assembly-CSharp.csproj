@@ -102,6 +102,8 @@
     <Compile Include="Assets\Scripts\Test\RETestSuite.cs" />
     <Compile Include="Assets\Scripts\Test\ShopTest.cs" />
     <Compile Include="Assets\Scripts\Test\TestSuite.cs" />
+    <Compile Include="Assets\Scripts\Test\TicTest.cs" />
+    <Compile Include="Assets\Scripts\Test\TicTest1.cs" />
     <Compile Include="Assets\Scripts\TicTacToe.cs" />
     <Compile Include="Assets\Scripts\TicTacToe1.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
