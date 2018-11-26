@@ -21,7 +21,7 @@ public class Question : MonoBehaviour
     List<string> questions = new List<string>() { "A is member of object B", "B is member of Object A", "Product of A and B", "None of these" };
     List<string> questions1 = new List<string>() { "Operator-&", "Operator-||", "Operator-&&", "Operator +" };
     List<string> questions2 = new List<string>() { "A Slash (/)", "A Fullstop(.)", "A Comma (,)", "A Semicolon (;)" };
-    List<string> questions3 = new List<string>() { "<fiostream>", "<ifstream>", "<ofstream>", "<fstream>" };
+    List<string> questions3 = new List<string>() { "<fiostream>", "<fstream>", "<ofstream>", "<ifstream>" };
     List<string> questions4 = new List<string>() { "thrown", "threw", "throw", "throws" };
     public Dropdown dropdown;
     public Dropdown dropdown1;
@@ -106,7 +106,7 @@ public class Question : MonoBehaviour
     {
         if (index == 1)
         {
-            point = 20;
+            point = 10;
             
         }
         else
@@ -125,7 +125,7 @@ public class Question : MonoBehaviour
     {
         if (index == 2)
         {
-            point1 = 20;
+            point1 = 10;
             
         }
         else
@@ -144,7 +144,7 @@ public class Question : MonoBehaviour
     {
         if (index == 3)
         {
-            point2 = 20;
+            point2 = 10;
             
         }
         else
@@ -162,7 +162,7 @@ public class Question : MonoBehaviour
     {
         if (index == 3)
         {
-            point3 = 20;
+            point3 = 10;
             
         }
         else
@@ -181,7 +181,7 @@ public class Question : MonoBehaviour
     {
         if (index == 2)
         {
-            point4 = 20;
+            point4 = 10;
             
         }
         else

@@ -62,9 +62,9 @@ public class DialogueManager : MonoBehaviour {
         }
         else
         {
-            PlayerManager.Money -= 50;
+            PlayerManager.Health += 10;
             Result.text = "Best Case!";
-            ResultText.text = "She accepted your invitation and you had a nice meal. You cost 50$";
+            ResultText.text = "She accepted your invitation and you had a nice meal.";
         }
     }
     public void ResultGenerate_2()//Work

@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
-    bool GameHasEnded = false;
-    public GameObject EndGameUI;
+public class GameManager : MonoBehaviour
+{
+    public static bool GameHasEnded = false;
+
+    //public GameObject EndGameUI;
+
+   
     public void EndGame()
     {
-        if (GameHasEnded == false)
-        {
-            GameHasEnded = true;
-            Debug.Log("game over!");
-            EndGameUI.SetActive(true);        
-        }
+        GameHasEnded = true;
+        Debug.Log("game over!");
+        //EndGameUI.SetActive(true);
     }
     public void Restart()
     {
@@ -21,16 +22,23 @@ public class GameManager : MonoBehaviour {
         {
             Destroy(o);
         }
-        EndGameUI.SetActive(false);
-        SceneManager.LoadScene("base");
+        //EndGameUI.SetActive(false);
+
+        SceneManager.LoadScene("Cover");
+
     }
     public void ExitGame()
     {
         Application.Quit();
     }
-    public void SwitchScene()
+    public void FinishGame()
     {
-
+        GameHasEnded = true;
+        SceneManager.LoadScene("gamefinish");
     }
+
+    
+      
+
 
 }

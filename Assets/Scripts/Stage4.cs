@@ -16,6 +16,10 @@ public class Stage4 : MonoBehaviour {
     **/
     public void Awake()
     {
-        DontDestroyOnLoad(this);    
+        DontDestroyOnLoad(this);
+        if(FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
     }
 }

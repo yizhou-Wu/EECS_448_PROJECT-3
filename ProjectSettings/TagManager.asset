@@ -12,6 +12,10 @@ TagManager:
   - ShotGame
   - Hole
   - Enemy
+  - Shop
+  - Final
+  - TEST1
+  - TEST2
   layers:
   - Default
   - TransparentFX

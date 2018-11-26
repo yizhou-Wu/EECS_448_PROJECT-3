@@ -14,7 +14,7 @@ public class Stage1 : MonoBehaviour {
     * @post Keep the GameObject player when change the scene because unity destroy eveything on current scene after change scenes.
     * @para None.
     **/
-    void Start()
+    public void Awake()
     {
         DontDestroyOnLoad(this);
         if (FindObjectsOfType(GetType()).Length > 1)
