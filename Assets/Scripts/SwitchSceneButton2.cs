@@ -48,7 +48,7 @@ public class SwitchSceneButton2 : MonoBehaviour
         }
         else
         {
-           
+            PlayerManager.AllowUse = true;
             Application.LoadLevel(LevelToLoad);
         }
     }

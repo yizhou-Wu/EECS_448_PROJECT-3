@@ -96,7 +96,14 @@
     <Compile Include="Assets\Scripts\Stage7.cs" />
     <Compile Include="Assets\Scripts\SwitchSceneButton.cs" />
     <Compile Include="Assets\Scripts\SwitchSceneButton2.cs" />
+    <Compile Include="Assets\Scripts\Test\FinalTest.cs" />
+    <Compile Include="Assets\Scripts\Test\FinishTest.cs" />
+    <Compile Include="Assets\Scripts\Test\MidtermTest.cs" />
+    <Compile Include="Assets\Scripts\Test\RETestSuite.cs" />
+    <Compile Include="Assets\Scripts\Test\ShopTest.cs" />
+    <Compile Include="Assets\Scripts\Test\TestSuite.cs" />
     <Compile Include="Assets\Scripts\TicTacToe.cs" />
+    <Compile Include="Assets\Scripts\TicTacToe1.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <None Include="Assets\citation.txt" />
     <Reference Include="UnityEditor.StandardEvents">

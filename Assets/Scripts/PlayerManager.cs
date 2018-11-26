@@ -18,7 +18,8 @@ public class PlayerManager : MonoBehaviour
     float i = 1;// Counter that prevent the user to move multiple times.
     //private static bool playerExist;// Flag to check whether the player is existing on current screnn;
     public static float Health = 80f;
-    public static float Money = 50f;
+    public static float Money = 100f;
+    public static bool AllowUse = true;
     public static string userName;
     //private bool GameHasEnded = f;
     /**
@@ -72,19 +73,21 @@ public class PlayerManager : MonoBehaviour
         {
             GameManager.GameHasEnded = true;
             FindObjectOfType<GameManager>().EndGame();
-            SceneManager.LoadScene("gamefinish");
+            //SceneManager.LoadScene("gamefinish");
+            gameObject.SetActive(false);
             enabled = false;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log(GameManager.GameHasEnded);
-        if (GameManager.GameHasEnded == false)
+        if (GameManager.GameHasEnded == false&&AllowUse==true)
         {
 
             if (collision.gameObject.tag == "Midterm")
             {
                 //gameObject.SetActive(false);
+                AllowUse = false;
                 SceneManager.LoadScene("Midterm");
                 collision.isTrigger = false;//Turn off the trigger so that the user cannot go back.
 
@@ -92,6 +95,7 @@ public class PlayerManager : MonoBehaviour
             else if (collision.gameObject.tag == "Tic")
             {
                 //gameObject.SetActive(false);
+                AllowUse = false;
                 SceneManager.LoadScene("Tic");
                 collision.isTrigger = false;
            
@@ -99,31 +103,15 @@ public class PlayerManager : MonoBehaviour
             else if (collision.gameObject.tag == "Final")
             {
                 //gameObject.SetActive(false);
+                AllowUse = false;
                 SceneManager.LoadScene("Final");
                 collision.isTrigger = false;
             }
             else if (collision.gameObject.tag == "Shop")
             {
                 //gameObject.SetActive(false);
+                AllowUse = false;
                 SceneManager.LoadScene("Shop");
-                collision.isTrigger = false;
-            }
-            else if (collision.gameObject.tag == "TEST")
-            {
-                //gameObject.SetActive(false);
-                SceneManager.LoadScene("randomE1");
-                collision.isTrigger = false;
-            }
-            else if (collision.gameObject.tag == "TEST1")
-            {
-                //gameObject.SetActive(false);
-                SceneManager.LoadScene("randomE2");
-                collision.isTrigger = false;
-            }
-            else if (collision.gameObject.tag == "TEST2")
-            {
-                //gameObject.SetActive(false);
-                SceneManager.LoadScene("randomE3");
                 collision.isTrigger = false;
             }
             else if (collision.gameObject.tag == "ShotGame")
@@ -132,17 +120,16 @@ public class PlayerManager : MonoBehaviour
                 {
                     Destroy(o);
                 }
-                //gameObject.SetActive(false);
+                AllowUse = false;
                 SceneManager.LoadScene("EECS268");
-               // Destroy()
                 collision.isTrigger = false;
-                
-                Debug.Log("2233456");
             }
             else if (collision.gameObject.tag == "RE")
             {
                 //gameObject.SetActive(false);
-                int levelnum = Random.Range(6, 9);
+                AllowUse = false;
+                collision.isTrigger = false;
+                int levelnum = Random.Range(6, 10);
                 SceneManager.LoadScene(levelnum);
             }
         }

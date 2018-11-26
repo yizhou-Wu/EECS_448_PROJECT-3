@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour {
     public GameObject Basepanel;
     public GameObject Resultpanel;
     private Queue<string> sentences;
-    private int DiceNum;
+    public static int DiceNum;
     public void Start()
     {
         sentences = new Queue<string>();
@@ -59,12 +59,14 @@ public class DialogueManager : MonoBehaviour {
         {
             Result.text = "Worst Case!";
             ResultText.text = "Sadly,The gril turned down your invitation.Nothing happened.";
+            PlayerManager.AllowUse = true;
         }
         else
         {
             PlayerManager.Health += 10;
             Result.text = "Best Case!";
             ResultText.text = "She accepted your invitation and you had a nice meal.";
+            PlayerManager.AllowUse = true;
         }
     }
     public void ResultGenerate_2()//Work
@@ -77,12 +79,14 @@ public class DialogueManager : MonoBehaviour {
             PlayerManager.Money += 5;
             Result.text = "Worst Case!";
             ResultText.text = "Work was as you expected it to be: bad.No tips were handed out.You earned $5";
+            PlayerManager.AllowUse = true;
         }
         else
         {
             PlayerManager.Money += 15;
             Result.text = "Best Case!";
             ResultText.text = "Work went well. You are not very tired and got some good tips.  You have earned $15";
+            PlayerManager.AllowUse = true;
         }
     }
     public void ResultGenerate_3()//Rain
@@ -96,11 +100,13 @@ public class DialogueManager : MonoBehaviour {
             PlayerManager.Money -= 10;
             Result.text = "Worst Case!";
             ResultText.text = "Oh no!Water has seeped into your bag and as a result, your homework is ruined and your laptop is broken, lowering your GPA.";
+            PlayerManager.AllowUse = true;
         }
         else
         {
             Result.text = "Best Case!";
             ResultText.text = "You are a little wet, but your homework and laptop are safe.  Get to class.";
+            PlayerManager.AllowUse = true;
         }
     }
     public void ResultGenerate_4()//sick
@@ -114,12 +120,14 @@ public class DialogueManager : MonoBehaviour {
             PlayerManager.Health -= 10;
             Result.text = "Worst Case!";
             ResultText.text = "You try to get out of bed but you can’t.Even sending emails is too hard.  Ouch, that hurts...your GPA that is.";
+            PlayerManager.AllowUse = true;
         }
         else
         {
             PlayerManager.Health -= 5;
             Result.text = "Worst Case!";
             ResultText.text = "You fight and fight and manage to get all of your work done.You are tired, but it all worked out.";
+            PlayerManager.AllowUse = true;
         }
     }
 

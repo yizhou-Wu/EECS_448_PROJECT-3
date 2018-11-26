@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final.unity
     guid: bd5e70835f31d46489ea7b9bfe009ed3
+  - enabled: 1
+    path: Assets/Scenes/TicTest.unity
+    guid: 785247641e070f140bd16677ba9f546d
   m_configObjects: {}

@@ -9,12 +9,12 @@ public class Question1 : MonoBehaviour
     //create a new text for totalpoint
     public Text totalpoint;
     //point for each question
-    public int point;
-    public int point1;
-    public int point2;
-    public int point3;
-    public int point4;
-    public int totalpoint1;
+    public static int point;
+    public static int point1;
+    public static int point2;
+    public static int point3;
+    public static int point4;
+    public static int totalpoint1;
     public  static float GPA1;
 
 
@@ -103,12 +103,12 @@ public class Question1 : MonoBehaviour
     * @post add elements into the first dropdown 
     * @para index of anwser(int).
     **/
-    public void DropdownIndex(int index)
+    public static void DropdownIndex(int index)
     {
         if (index == 1)
         {
-            point = 10;
-            
+            totalpoint1 += 10;
+
         }
         else
         {
@@ -122,12 +122,12 @@ public class Question1 : MonoBehaviour
     * @post add elements into the second dropdown 
     * @para index of anwser(int).
     **/
-    public void DropdownIndex1(int index)
+    public static void DropdownIndex1(int index)
     {
         if (index == 3)
         {
-            point1 = 10;
-            
+            totalpoint1 += 10;
+
         }
         else
         {
@@ -141,12 +141,12 @@ public class Question1 : MonoBehaviour
     * @post add elements into the third dropdown 
     * @para index of anwser(int).
     **/
-    public void DropdownIndex2(int index)
+    public static void DropdownIndex2(int index)
     {
         if (index == 2)
         {
-            point2 = 10;
-            
+            totalpoint1 += 10;
+
         }
         else
         {
@@ -159,12 +159,12 @@ public class Question1 : MonoBehaviour
     * @post add elements into the fourth dropdown 
     * @para index of anwser(int).
     **/
-    public void DropdownIndex3(int index)
+    public static void DropdownIndex3(int index)
     {
         if (index == 2)
         {
-            point3 = 10;
-            
+            totalpoint1 += 10;
+
         }
         else
         {
@@ -178,12 +178,12 @@ public class Question1 : MonoBehaviour
     * @post add elements into the fifth dropdown 
     * @para index of anwser(int).
     **/
-    public void DropdownIndex4(int index)
+    public static void DropdownIndex4(int index)
     {
         if (index == 2)
         {
-            point4 = 10;
-            
+            totalpoint1 += 10;
+
         }
         else
         {

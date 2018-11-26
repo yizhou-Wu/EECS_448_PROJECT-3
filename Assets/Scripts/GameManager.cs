@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static bool GameHasEnded = false;
+    public static bool testmode = false;
+    public GameObject EndGameUI;
 
-    //public GameObject EndGameUI;
 
-   
     public void EndGame()
     {
         GameHasEnded = true;
         Debug.Log("game over!");
-        //EndGameUI.SetActive(true);
+        EndGameUI.SetActive(true);
     }
     public void Restart()
     {
@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviour
     {
         GameHasEnded = true;
         SceneManager.LoadScene("gamefinish");
+    }
+    public void TestModeOn()
+    {
+        testmode = true;
     }
 
     

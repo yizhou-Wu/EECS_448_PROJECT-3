@@ -102,12 +102,11 @@ public class Question : MonoBehaviour
     * @post add elements into the first dropdown 
     * @para index of anwser(int).
     **/
-    public void DropdownIndex(int index)
+    public static void DropdownIndex(int index)
     {
         if (index == 1)
         {
-            point = 10;
-            
+            totalpoint1 += 20;
         }
         else
         {
@@ -121,12 +120,12 @@ public class Question : MonoBehaviour
     * @post add elements into the second dropdown 
     * @para index of anwser(int).
     **/
-    public void DropdownIndex1(int index)
+    public static void DropdownIndex1(int index)
     {
         if (index == 2)
         {
-            point1 = 10;
-            
+            totalpoint1 += 20;
+
         }
         else
         {
@@ -140,12 +139,12 @@ public class Question : MonoBehaviour
     * @post add elements into the third dropdown 
     * @para index of anwser(int).
     **/
-    public void DropdownIndex2(int index)
+    public static void DropdownIndex2(int index)
     {
         if (index == 3)
         {
-            point2 = 10;
-            
+            totalpoint1 += 20;
+
         }
         else
         {
@@ -158,12 +157,12 @@ public class Question : MonoBehaviour
     * @post add elements into the fourth dropdown 
     * @para index of anwser(int).
     **/
-    public void DropdownIndex3(int index)
+    public static void DropdownIndex3(int index)
     {
         if (index == 3)
         {
-            point3 = 10;
-            
+            totalpoint1 += 20;
+
         }
         else
         {
@@ -177,12 +176,12 @@ public class Question : MonoBehaviour
     * @post add elements into the fifth dropdown 
     * @para index of anwser(int).
     **/
-    public void DropdownIndex4(int index)
+    public static void DropdownIndex4(int index)
     {
         if (index == 2)
         {
-            point4 = 10;
-            
+            totalpoint1 += 20;
+
         }
         else
         {

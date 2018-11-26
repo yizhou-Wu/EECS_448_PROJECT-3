@@ -913,6 +913,47 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 507175167}
   m_CullTransparentMesh: 0
+--- !u!1 &508236753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 508236754}
+  - component: {fileID: 508236755}
+  m_Layer: 0
+  m_Name: TestMode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &508236754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 508236753}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.640053, y: 42.193287, z: 162.41446}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &508236755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 508236753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed28fa478aa7e4066aaa78b819a09693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  user: {fileID: 770517774}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,7 +1113,7 @@ GameObject:
   - component: {fileID: 563559093}
   m_Layer: 0
   m_Name: Stage3
-  m_TagString: TEST2
+  m_TagString: RE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1542,7 +1583,6 @@ GameObject:
   - component: {fileID: 770517772}
   - component: {fileID: 770517771}
   - component: {fileID: 770517770}
-  - component: {fileID: 770517773}
   - component: {fileID: 770517774}
   - component: {fileID: 770517775}
   m_Layer: 0
@@ -1622,17 +1662,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &770517773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 770517769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46bb5a387f696e54597b0583a30e656d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &770517774
 Rigidbody2D:
   serializedVersion: 4
@@ -2185,7 +2214,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1826628958}
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -2245,7 +2274,7 @@ GameObject:
   - component: {fileID: 1627453375}
   m_Layer: 0
   m_Name: Stage1
-  m_TagString: TEST
+  m_TagString: RE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2414,6 +2443,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1826628957}
+  - component: {fileID: 1826628958}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2434,6 +2464,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1826628958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1826628956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a379582753d5e0a4798626a3c8e64d95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EndGameUI: {fileID: 571977228}
 --- !u!1 &1834851337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,7 +2978,7 @@ GameObject:
   - component: {fileID: 2119597657}
   m_Layer: 0
   m_Name: Stage2
-  m_TagString: TEST1
+  m_TagString: RE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

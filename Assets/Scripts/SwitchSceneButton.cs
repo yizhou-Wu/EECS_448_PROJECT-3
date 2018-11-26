@@ -40,6 +40,7 @@ public class SwitchSceneButton : MonoBehaviour
         PlayerManager.GPA = Question.GPA+Question1.GPA1;
         PlayerManager.Money = item.totalmoney;
         //go.SetActive(true);
+        PlayerManager.AllowUse = true;
         Application.LoadLevel(LevelToLoad);
         
     }

@@ -17,7 +17,7 @@ public class item : MonoBehaviour {
     public bool buy3 = true;
 
 
-    public float money;
+    public static float money;
     public static float totalmoney;
 
 	// Use this for initialization
@@ -29,13 +29,13 @@ public class item : MonoBehaviour {
     public void item1()
     {
 
-        if (money - 10 == 0)
+        if (PlayerManager.Money - 10 == 0)
         {
-           // Application.LoadLevel(7);
-            money = 0;
+            // Application.LoadLevel(7);
+            PlayerManager.Money = 0;
             display();
         }
-        else if(money-10 <0)
+        else if(PlayerManager.Money - 10 <0)
         {
             enoughmoney.SetActive(true);
             //Application.LoadLevel(7);
@@ -44,7 +44,7 @@ public class item : MonoBehaviour {
         else
         {
             PlayerManager.Health += 10;
-            money -= 10;
+            PlayerManager.Money -= 10;
             display();
         }
 
@@ -53,13 +53,13 @@ public class item : MonoBehaviour {
     public void item2()
     {
 
-        if (money - 5 == 0)
+        if (PlayerManager.Money - 5 == 0)
         {
-            money = 0;
+            PlayerManager.Money = 0;
             display();
             //Application.LoadLevel(7);
         }
-        else if (money - 5 < 0)
+        else if (PlayerManager.Money - 5 < 0)
         {
             enoughmoney.SetActive(true);
             //UnityEditor.EditorUtility.DisplayDialog("Error", "you dont have enough money", "Alright");
@@ -67,7 +67,7 @@ public class item : MonoBehaviour {
         else
         {
             PlayerManager.Health += 5;
-            money -= 5;
+            PlayerManager.Money -= 5;
             display();
         }
     }
@@ -75,13 +75,13 @@ public class item : MonoBehaviour {
     public void item3()
     {
 
-        if (money - 1 == 0)
+        if (PlayerManager.Money - 1 == 0)
         {
-            money = 0;
+            PlayerManager.Money = 0;
             display();
             // Application.LoadLevel(7);
         }
-        else if (money - 1 < 0)
+        else if (PlayerManager.Money - 1 < 0)
         {
             enoughmoney.SetActive(true);
             //UnityEditor.EditorUtility.DisplayDialog("Error", "you dont have enough money", "Alright");
@@ -89,7 +89,7 @@ public class item : MonoBehaviour {
         else
         {
             PlayerManager.Health += 1;
-            money -= 1;
+            PlayerManager.Money -= 1;
             display();
         }
     }
@@ -104,15 +104,15 @@ public class item : MonoBehaviour {
     {
         if (buy1 == true)
       {
-            if (money - 15 == 0)
+            if (PlayerManager.Money - 15 == 0)
             {
-                money = 0;
+                PlayerManager.Money = 0;
                 display();
                 book1.SetActive(true);
 
                 //Application.LoadLevel(7);
             }
-            else if (money - 15 < 0)
+            else if (PlayerManager.Money - 15 < 0)
             {
                 enoughmoney.SetActive(true);
                 //book1.SetActive(false);
@@ -120,7 +120,7 @@ public class item : MonoBehaviour {
             }
             else
             {
-                money -= 15;
+                PlayerManager.Money -= 15;
                 display();
                 book1.SetActive(true);
                 buy1 = false;
@@ -133,21 +133,21 @@ public class item : MonoBehaviour {
     {
         if (buy2 == true)
         {
-            if (money - 15 == 0)
+            if (PlayerManager.Money - 15 == 0)
             {
-                money = 0;
+                PlayerManager.Money = 0;
                 display();
                 book2.SetActive(true);
                 //Application.LoadLevel(7);
             }
-            else if (money - 15 < 0)
+            else if (PlayerManager.Money - 15 < 0)
             {
                 enoughmoney.SetActive(true);
                 //UnityEditor.EditorUtility.DisplayDialog("Error", "you dont have enough money", "Alright");
             }
             else
             {
-                money -= 15;
+                PlayerManager.Money -= 15;
                 display();
                 book2.SetActive(true);
                 buy2 = false;
@@ -160,21 +160,21 @@ public class item : MonoBehaviour {
     {
         if (buy3 == true)
         {
-            if (money - 30 == 0)
+            if (PlayerManager.Money - 30 == 0)
             {
-                money = 0;
+                PlayerManager.Money = 0;
                 display();
                 book3.SetActive(true);
                 //Application.LoadLevel(7);
             }
-            else if (money - 30 < 0)
+            else if (PlayerManager.Money - 30 < 0)
             {
                 enoughmoney.SetActive(true);
                 //UnityEditor.EditorUtility.DisplayDialog("Error", "you dont have enough money", "Alright");
             }
             else
             {
-                money -= 30;
+                PlayerManager.Money -= 30;
                 display();
                 book3.SetActive(true);
                 buy3 = false;
@@ -187,12 +187,12 @@ public class item : MonoBehaviour {
 
   public void display()
   {
-     m_money.text = money.ToString();
+     m_money.text = PlayerManager.Money.ToString();
   }
 
     public  void total()
     {
-        totalmoney = money;
+        totalmoney = PlayerManager.Money;
     }
 	// Update is called once per frame
 	void Update () {
