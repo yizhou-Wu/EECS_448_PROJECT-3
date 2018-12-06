@@ -7,6 +7,14 @@ UML diagrams made with Creately
 Gantt chart made using a Gantt chart template
   https://www.teamgantt.com/free-gantt-chart-excel-template  
  
+ 
+
+Info for maintenance plan:
+  https://www.codementor.io/blog/cost-of-hiring-full-time-and-freelance-software-developers-1nqgg7b19d
+  
+  
+  
+
 
     
 
