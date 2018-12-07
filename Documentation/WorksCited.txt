@@ -12,6 +12,15 @@ Gantt chart made using a Gantt chart template
 Info for maintenance plan:
   https://www.codementor.io/blog/cost-of-hiring-full-time-and-freelance-software-developers-1nqgg7b19d
   
+References for all scenes besides the final minigame:
+    character: https://en.wikipedia.org/wiki/Kansas_Jayhawks#/media/File:Kansas_Jayhawks_logo.svg
+    dice: https://www.kisspng.com/png-pixel-art-royalty-free-rolling-dice-4456418/
+    background: http://www.kansan.com/news/ku-pays-in-secret-title-ix-settlement/article_7f388d3c-6e8f-11e8-959b-6f42bb2d0e5d.html
+    datingback: https://classrooms.ku.edu/1003-wescoe
+    rainback: https://sf.curbed.com/2018/11/21/18106270/rain-camp-fire-smoke-toxic-snopes-air-resources-board
+    sickback: https://blog.cedars-sinai.edu/when-to-keep-a-sick-kid-home-from-school/
+    work:https://theblacksheeponline.com/campus-life/kus-most-dangerous-dishes-a-look-into-the-belly-of-ku-dining
+  
   
   
 
