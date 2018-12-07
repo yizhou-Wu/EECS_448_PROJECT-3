@@ -20,9 +20,10 @@ References for all scenes besides the final minigame:
     rainback: https://sf.curbed.com/2018/11/21/18106270/rain-camp-fire-smoke-toxic-snopes-air-resources-board
     sickback: https://blog.cedars-sinai.edu/when-to-keep-a-sick-kid-home-from-school/
     work:https://theblacksheeponline.com/campus-life/kus-most-dangerous-dishes-a-look-into-the-belly-of-ku-dining
-  
-  
-  
+    minigame-environment: https://jesse-m.itch.io/jungle-pack
+    minigame-characters: https://mobilegamegraphics.itch.io/jetpack-hero-game-kit
+    minigame-music: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100772
+    minigame-sound effect: https://www.noiseforfun.com/
 
 
     
